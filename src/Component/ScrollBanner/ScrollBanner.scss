@@ -1,0 +1,61 @@
+.scroll-banner {
+  background-color: #fff;
+  margin-top: 11px;
+  .scroll-banner-item {
+    max-height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .scroll-banner-label {
+    width: 20;
+    height: 20;
+  }
+  .slick-list {
+    flex: 1;
+    .slick-track {
+      margin: 20px 0;
+    }
+  }
+  .ant-carousel .slick-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-carousel .slick-prev,
+  .ant-carousel .slick-next {
+    position: relative;
+  }
+  .ant-carousel .slick-prev {
+    left: 0;
+    width: 85px;
+    height: 100px;
+    background: no-repeat url('../../Assets/images/ScrollBanner/back-arrow.svg')
+      center;
+    display: block;
+    &:hover {
+      background: no-repeat
+        url('../../Assets/images/ScrollBanner/back-arrow.svg') center;
+    }
+  }
+  .ant-carousel .slick-next {
+    right: 0;
+    width: 85px;
+    height: 100px;
+    background: no-repeat url('../../Assets/images/ScrollBanner/next-arrow.svg')
+      center;
+    display: block;
+    &:hover {
+      background: no-repeat
+        url('../../Assets/images/ScrollBanner/next-arrow.svg') center;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .ant-carousel .slick-prev,
+    .ant-carousel .slick-next {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.call-to-action {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 11px;
+  &-container {
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33333%);
+    gap: 2px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 0;
+  }
+}
+
+.cta-button {
+  color: #3a3a3a;
+  background-color: #eee;
+
+  &:hover {
+    color: inherit;
+  }
+  .cta-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 60px;
+    padding: 0 10px;
+    .cta-title {
+      font-size: 18px;
+      font-family: Noto-San-Medium;
+    }
+    .cta-quantity {
+      font-size: 16px;
+      font-family: Noto-San-Regular;
+      color: inherit;
+      background-color: #ffd200;
+      border-radius: 13px;
+      min-width: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 8px;
+      padding-right: 8px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .cta-content {
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 678px) {
+    .cta-content {
+      .cta-title {
+        font-size: 14px;
+      }
+      .cta-quantity {
+        font-size: 12px;
+      }
+    }
+  }
+  @media screen and (max-width: 467px) {
+    .cta-content {
+      .cta-title {
+        font-size: 12px;
+      }
+      .cta-quantity {
+        font-size: 10px;
+      }
+    }
+  }
+}

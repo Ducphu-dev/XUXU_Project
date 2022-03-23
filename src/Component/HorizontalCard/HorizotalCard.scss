@@ -1,0 +1,43 @@
+@import '../../Assets/style/mixins';
+@import '../../Assets/style/variables';
+
+.block-horizon {
+  // width: 100%;
+  display: grid;
+  padding: 20px;
+  column-gap: 16px;
+  flex-wrap: wrap;
+  @media (max-width: 1280px) {
+    column-gap: 9px;
+  }
+  @media (max-width: 1024px) {
+    column-gap: 6px;
+    padding: 15px;
+  }
+  &.padding_mobile{
+    @media (max-width: 1024px) {
+      padding: 17px 4.5vw 5px;
+    }
+    
+  }
+
+  &.horizontal-5 {
+    grid-template-columns: repeat(5, 1fr);
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    // @media (max-width:540px) {
+    //     grid-template-columns: repeat(3,1fr);
+    // }
+    // @media (max-width:300px) {
+    //     grid-template-columns: repeat(2,1fr);
+
+    // }
+  }
+  &.horizontal-4 {
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

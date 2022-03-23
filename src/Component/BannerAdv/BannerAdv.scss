@@ -1,0 +1,9 @@
+.BannerAdv{
+    padding: 0 15%;
+    @media (max-width:1024px) {
+        
+        padding: 0 5%;
+    }
+    background-color: white;
+    margin-top: 11px;
+}

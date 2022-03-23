@@ -1,0 +1,191 @@
+.card-item-three {
+    cursor: pointer;
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    height: 96px;
+    background-color: #fff;
+    display: flex;
+    font-family: Noto-San-Regular;
+    object-fit: contain;
+    img {
+        width: unset;
+    }
+
+    .card-left {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+
+        &-img {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            width: 142px;
+            height: 96px;
+            overflow: hidden;
+        }
+        &-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            max-width: 100%;
+            height: auto;
+            margin-right: 1px;
+            height: 26px;
+        }
+        &-icon-cup {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+
+        }
+    }
+    .card-right {
+        box-sizing: border-box;
+        margin: 0;
+        min-width: 0;
+        flex: 1;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 9px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        justify-content: center;
+
+        &-title {
+            height: 22.4px;
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            color: #333333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            .title-icon {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                height: 16px;
+                margin-right: 3px;
+            }
+            .title {
+                font-family: Noto-San-Regular;
+                line-height: 0;
+            }
+        }
+        &-content {
+            height: 22.4px;
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+
+            .content {
+                color: #999;
+                line-height: 0;
+            }
+        }
+        &-author {
+            height: 22.4px;
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            color: #999;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .view {
+                display: flex;
+                align-items: center;
+                &-icon {
+                    box-sizing: border-box;
+                    margin: 0;
+                    min-width: 0;
+                    max-width: 100%;
+                    height: auto;
+                    width: 11px;
+                    height: 11px;
+                }
+                .count {
+                    line-height: 0;
+                    margin-left: 4px;
+                }
+            }
+            .vertical-dash {
+                box-sizing: border-box;
+                margin: 0;
+                min-width: 0;
+                display: block;
+                vertical-align: middle;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                min-width: 1px;
+                width: 1px;
+                height: 11px;
+                background-color: #d9d9d9;
+            }
+            .author {
+                &-name {
+                    line-height: 0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1279.98px) {
+        height: 75px;
+        line-height: 0;
+        
+        .card-left {
+            &-icon {
+                width: 13%;
+                height: unset;
+            }
+            &-img {
+                width: 110px;
+                height: 75px;
+            }
+        }
+        .card-right {
+            gap: 0;
+            &-title {
+                .title {
+                    font-size: 14px;
+                }
+            }
+            &-author {
+                font-size: 12px;
+            }
+        }
+    }
+    @media screen and (max-width: 767.98px) {
+        .card-left {
+            &-icon {
+                height: 20px;
+                width: unset;
+            }
+        }
+        .card-right {
+            margin-left: 10px;
+        }
+
+    }
+
+    
+}
