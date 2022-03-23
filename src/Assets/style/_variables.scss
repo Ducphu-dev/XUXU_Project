@@ -5,25 +5,16 @@ $family: (
 
 $color: (	
 	// theme
-	main: #eee,
+	main: #111111,
 
-	// text
-	// text-1:#242526,
-	text-1:#ffd200,
-	text-2:#333333,
-	text-3:#9c9c9c,
-	text-4:#bbbbbb,
-	text-5:#999,
-	text-6:#bdbdbd,
-	text-7:#c6c6c6,
+	//color
+	gray-1:#f1f2f5,
+	black-1:#040404
+	red-1:#ff2400
+
 	
-	// bg
-	bg-1:#242526,
-	bg-2:#ffd200,
-	bg-3:#f7f7f7,
-
 	// required
-	b: rgb(68, 44, 44),
+	b: #000,
 	w: #FFF,
 	x: #F6F6F6,
 	// notification
@@ -57,9 +48,6 @@ $space:(
 	5: 5px,
 	0: 0px
 );
-
-
-
 
 
 

@@ -1,3 +1,5 @@
+@import "../style/variables";
+
 *,
 *::before,
 *::after {
@@ -14,37 +16,17 @@ html, body{
 	scroll-behavior: smooth;
 	
 	line-height: 1.4 !important;
-	font-family: Noto-San-Regular;
+	font-family: Montserrat-Regular;
 }
 
-html {
-	// font-size: 52.5%; // 8.4px
-	// @media (min-width: 769px) {
-	// 	font-size: 57.5%; // 9.2px
-	// }
-	// @media (min-width: 1281px) {
-	// 	font-size: 62.5%; // 10px
-	// }
-	// @media (min-width: 1921px) {
-	// 	font-size: 77%; // 12.32px
-	// }
-}
 
 body {
-	font-size: 16px;
-	background-color: #eee !important;
-	color: #000000;
+	font-size: 18px;
+	background-color: white !important;
+	color: map-get($color, main );
 
 	max-width: 100%;
 }
-
-// // fullpage
-// main{
-// 	position: relative;
-	
-// 	width: 100%;
-	
-// }
 
 
 main,
@@ -77,16 +59,7 @@ hr {
 	overflow: visible;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-// 	margin-top: 0;
-// 	margin-bottom: 0;
-// }
-
+// 
 p {
 	margin-top: 0;
 	margin-bottom: 0;
