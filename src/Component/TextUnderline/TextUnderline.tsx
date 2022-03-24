@@ -24,11 +24,12 @@ const Text = styled.span<{ borderheight: any; bottom: any }>`
   font-weight: 600;
   color: #111111;
   position: relative;
+  display: inline-block;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: ${({ bottom }) => (bottom ? `-${bottom}px` : '-5px')};
+    bottom: ${({ bottom }) => (bottom ? `${bottom}px` : '-5px')};
     left: 0;
     right: 0;
     height: ${({ borderheight }) =>

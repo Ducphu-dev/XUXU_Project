@@ -1,87 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './About.scss';
 import about1 from '../../Assets/images/About/about-01.png';
 import about2 from '../../Assets/images/About/about-02-mov.png';
 import about3 from '../../Assets/images/About/about-02.png';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import TextUnderline from '../../Component/TextUnderline/TextUnderline';
+import useWindowSize from '../../Utils/useWindowSize/useWindowSize';
 
 type Props = {};
 
 const textUnderline1 = 'XUXU Profile';
-const textUnderline2 = [
-    {
-        text: 'This',
-    },
-    {
-        text: 'is',
-    },
-    {
-        text: 'XUXU,',
-    },
-    {
-        text: 'Excutive',
-    },
-    {
-        text: 'Creative',
-    },
-    {
-        text: 'Director',
-    },
-    {
-        text: 'at',
-    },
-    {
-        text: 'Huge',
-    },
-    {
-        text: 'Oakland,',
-    },
-    {
-        text: 'Artist',
-    },
-    {
-        text: 'and',
-    },
-    {
-        text: 'Designer',
-    },
-    {
-        text: 'based',
-    },
-    {
-        text: 'in',
-    },
-    {
-        text: 'California.',
-    },
-];
+const textUnderline21 = 'This is XUXU,';
+const textUnderline22 = 'Excutive Creatvie Director';
+const textUnderline23 = 'at Huge Oakland, Artist';
+const textUnderline24 = 'and Designer based in';
+const textUnderline25 = 'Califonia.';
 
-const textUnderline3 = [
-    {
-        text: 'Awwards Conference — Amsterdam.',
-    },
-    {
-        text: 'Awwards Conference — San Francisco.',
-    },
-    {
-        text: 'IngeniUX — Seattle.',
-    },
-    {
-        text: 'Digital Design Days 2019 — Milan.',
-    },
-];
+const textUnderline3 = 'Awwards Conference — Amsterdam.Awwards Conference — San Francisco.IngeniUX — Seattle.Digital Design Days 2019 — Milan';
 
-const textUnderline4 = [
-    {
-        text: 'I',
-    },
-    {
-        text: 'consult',
-    },
-    {
-        text: '&',
-    },
+const textUnderline41 = 'I consult &';
+const textUnderline42 = [
     {
         text: 'design',
     },
@@ -91,12 +29,186 @@ const textUnderline4 = [
 ];
 
 const About = (props: Props) => {
+    const { width, height } = useWindowSize();
+    const [styleHeading, setStyleHeading] = useState({
+        fontSize: `54px`,
+        fontFamily: '$montserrat',
+        marginRight: '25px',
+        fontWeight: '600',
+        lineHeight: '1.1',
+        color: '#040404',
+    });
+    const [borderHeighHeading, setBorderHeading] = useState(5);
+
+    const [styleInfo1, setStyleInfo1] = useState<any>({
+        fontSize: `54px`,
+        fontFamily: '$montserrat',
+        marginRight: '20px',
+        fontWeight: '600',
+        marginBottom: '10px',
+        color: '#040404',
+    });
+    const [borderHeightInfo1, setBorderHeightInfo1] = useState<number>(5);
+    const [styleInfo2, setStyleInfo2] = useState<any>({
+        fontSize: `24px`,
+        fontFamily: '$montserrat',
+        marginRight: '20px',
+        fontWeight: '400',
+        marginBottom: '20px',
+        lineHeight: '0.5',
+    });
+    const [borderHeightInfo2, setBorderHeightInfo2] = useState<number>(0.5);
+    const [styleInfo3, setStyleInfo3] = useState<any>({
+        fontSize: `54px`,
+        fontFamily: '$montserrat',
+        marginRight: '20px',
+        fontWeight: '600',
+        marginBottom: '20px',
+        // lineHeight: '0.5',
+        color: '#040404',
+    });
+    const [borderHeightInfo3, setBorderHeightInfo3] = useState<number>(5);
+    useEffect(() => {
+        if (width > 1279) {
+            setStyleHeading({
+                fontSize: `54px`,
+                fontFamily: '$montserrat',
+                marginRight: '25px',
+                fontWeight: '600',
+                lineHeight: '1.1',
+                color: '#040404',
+            });
+            setBorderHeading(5);
+            setStyleInfo1({
+                fontSize: `54px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '10px',
+                color: '#040404',
+            });
+            setBorderHeightInfo1(5);
+            setStyleInfo2({
+                fontSize: `24px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '400',
+                marginBottom: '20px',
+                lineHeight: '0.5',
+            });
+            setBorderHeightInfo2(0.5);
+            setStyleInfo3({
+                fontSize: `54px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '20px',
+                // lineHeight: '0.5',
+                color: '#040404',
+            });
+            setBorderHeightInfo3(5);
+        }
+        if (width <= 1279 && width > 768) {
+            setStyleInfo1({
+                ...styleInfo1,
+                fontSize: '24px',
+                fontWeight: '600',
+                marginBottom: '15px',
+                lineHeight: '1',
+                color: '#040404',
+            });
+            setBorderHeightInfo1(3);
+            setStyleInfo2({
+                ...styleInfo2,
+                fontSize: '23.1px',
+                marginBottom: '20px',
+            });
+
+            setStyleInfo3({
+                ...styleInfo3,
+                fontSize: '24px',
+                marginRight: '10px',
+                marginBottom: '10px',
+                lineHeight: '1',
+            });
+            setBorderHeightInfo3(3);
+        } else if (width <= 768 && width > 480) {
+            setStyleInfo1({
+                ...styleInfo1,
+                fontSize: '16px',
+                marginRight: '10px',
+                marginBottom: '10px',
+                color: '#040404',
+                lineHeight: '1',
+            });
+            setBorderHeightInfo1(2);
+            setStyleHeading({
+                ...styleHeading,
+                fontSize: `30px`,
+                marginRight: '15px',
+                lineHeight: '1.2',
+            });
+            setBorderHeading(3);
+
+            setStyleInfo2({
+                ...styleInfo2,
+                fontSize: '16px',
+            });
+            setStyleInfo3({
+                ...styleInfo3,
+                fontSize: '16px',
+                marginRight: '10px',
+                marginBottom: '10px',
+                lineHeight: '1',
+            });
+            setBorderHeightInfo3(2);
+        } else if (width <= 480 && width > 320) {
+            setStyleInfo1({
+                ...styleInfo1,
+                fontSize: '24px',
+                fontWeight: '600',
+                marginRight: '10px',
+                marginBottom: '15px',
+                lineHeight: '1',
+            });
+            setBorderHeightInfo1(3);
+
+            setStyleHeading({
+                ...styleHeading,
+                fontSize: `24px`,
+                marginRight: '10px',
+                lineHeight: '1.2',
+            });
+            setBorderHeading(3);
+            setStyleInfo2({
+                ...styleInfo2,
+                fontSize: '16px',
+                marginBottom: '10px',
+            });
+
+            setStyleInfo3({
+                ...styleInfo3,
+                fontSize: '24px',
+                fontWeight: '600',
+                marginBottom: '15px',
+                marginRight: '10px',
+                lineHeight: '1',
+            });
+            setBorderHeightInfo3(3);
+        } else if (width <= 320) {
+            setStyleInfo2({
+                ...styleInfo2,
+                fontSize: '14px',
+                marginBottom: '10px',
+            });
+        }
+    }, [width]);
     return (
         <div className="about-container">
             <div className="about-heading">
                 {textUnderline1.split(' ').map((item, index) => (
                     <>
-                        <TextUnderline bottom={0} key={index} style={{ fontSize: '54px', fontFamily: 'Montserrat-SemiBold', marginRight: '25px' }} borderheight={5}>
+                        <TextUnderline bottom={0} key={index} style={styleHeading} borderheight={borderHeighHeading}>
                             {item}
                         </TextUnderline>
                     </>
@@ -107,11 +219,51 @@ const About = (props: Props) => {
             </div>
             <div className="about-info1">
                 <div className="about-info1-left">
-                    <p>This is XUXU,</p>
-                    <p>Excutive Creatvie Director</p>
-                    <p>at Huge Oakland, Artist</p>
-                    <p>and Designer based in </p>
-                    <p>Califonia.</p>
+                    <div>
+                        {textUnderline21.split(' ').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                    {item}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
+                    <div>
+                        {textUnderline22.split(' ').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                    {item}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
+                    <div>
+                        {textUnderline23.split(' ').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                    {item}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
+                    <div>
+                        {textUnderline24.split(' ').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                    {item}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
+                    <div>
+                        {textUnderline25.split(' ').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                    {item}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
                 </div>
                 <div className="about-info1-right">
                     <div className="about-info1-text1">
@@ -153,10 +305,16 @@ const About = (props: Props) => {
                             versions below:
                         </p>
                     </p>
-                    <p className="about-info2-left-text">Awwards Conference — Amsterdam.</p>
-                    <p className="about-info2-left-text">Awwards Conference — San Francisco.</p>
-                    <p className="about-info2-left-text">IngeniUX — Seattle.</p>
-                    <p className="about-info2-left-text">Digital Design Days 2019 — Milan.</p>
+                    <div>
+                        {textUnderline3.split('.').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo2} borderheight={borderHeightInfo2}>
+                                    {item}.
+                                </TextUnderline>
+                                <br />
+                            </>
+                        ))}
+                    </div>
                 </div>
                 <div className="about-info2-right">
                     <div className="about-info2-right-text">
@@ -177,53 +335,138 @@ const About = (props: Props) => {
             </div>
             <div className="about-info3">
                 <div className="about-info3-left">
-                    <p className="about-info3-left-text">I consult </p>
-                    <p className="about-info3-left-text">design product : </p>
+                    <div>
+                        {textUnderline41.split(' ').map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                    {item}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
+                    <div>
+                        {textUnderline42.map((item, index) => (
+                            <>
+                                <TextUnderline bottom={0} key={index} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                    {item.text}
+                                </TextUnderline>
+                            </>
+                        ))}
+                    </div>
                 </div>
                 <div className="about-info3-right">
                     <div className="about-info3-right-text">
                         <div className="line1">
-                            <ArrowRightOutlined />
-                            <p className="">Fine art :</p>
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                <ArrowRightOutlined />
+                            </TextUnderline>
+
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                Fine art :{' '}
+                            </TextUnderline>
                         </div>
                         <div className="line2">
-                            <p className="">I define brand characteristics to anchor them in people’s consciousness.</p>
+                            <p className="">
+                                I define brand
+                                <TextUnderline
+                                    borderheight={1}
+                                    style={{ fontSize: `${width <= 768 ? '16px' : '24px'}`, lineHeight: '0.5', fontWeight: '400', margin: '0 5px' }}
+                                >
+                                    characteristics
+                                </TextUnderline>
+                                to anchor them in people’s consciousness.
+                            </p>
                         </div>
                     </div>
                     <div className="about-info3-right-text">
                         <div className="line1">
-                            <ArrowRightOutlined />
-                            <p className="">Graphic design :</p>
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                <ArrowRightOutlined />
+                            </TextUnderline>
+
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                Graphic design :
+                            </TextUnderline>
                         </div>
                         <div className="line2">
-                            <p className="">I define brand characteristics to anchor them in people’s consciousness.</p>
+                            <p className="">
+                                I define brand characteristics to
+                                <TextUnderline
+                                    borderheight={1}
+                                    style={{ fontSize: `${width <= 768 ? '16px' : '24px'}`, lineHeight: '0.5', fontWeight: '400', margin: '0 5px' }}
+                                >
+                                    anchor
+                                </TextUnderline>
+                                them in people’s consciousness.
+                            </p>
                         </div>
                     </div>
                     <div className="about-info3-right-text">
                         <div className="line1">
-                            <ArrowRightOutlined />
-                            <p className="">Illustration :</p>
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                <ArrowRightOutlined />
+                            </TextUnderline>
+
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                Illustration :
+                            </TextUnderline>
                         </div>
                         <div className="line2">
-                            <p className="">I define brand characteristics to anchor them in people’s consciousness.</p>
+                            <p className="">
+                                I define
+                                <TextUnderline
+                                    borderheight={1}
+                                    style={{ fontSize: `${width <= 768 ? '16px' : '24px'}`, lineHeight: '0.5', fontWeight: '400', margin: '0 5px' }}
+                                >
+                                    brand
+                                </TextUnderline>
+                                characteristics to anchor them in people’s consciousness.
+                            </p>
                         </div>
                     </div>
                     <div className="about-info3-right-text">
                         <div className="line1">
-                            <ArrowRightOutlined />
-                            <p className="">Advertising :</p>
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                <ArrowRightOutlined />
+                            </TextUnderline>
+
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                Advertising :
+                            </TextUnderline>
                         </div>
                         <div className="line2">
-                            <p className="">I define brand characteristics to anchor them in people’s consciousness.</p>
+                            <p className="">
+                                I define brand characteristics to anchor them in
+                                <TextUnderline
+                                    borderheight={1}
+                                    style={{ fontSize: `${width <= 768 ? '16px' : '24px'}`, lineHeight: '0.5', fontWeight: '400', margin: '0 5px' }}
+                                >
+                                    people’s
+                                </TextUnderline>
+                                consciousness.
+                            </p>
                         </div>
                     </div>
                     <div className="about-info3-right-text">
                         <div className="line1">
-                            <ArrowRightOutlined />
-                            <p className="">Game :</p>
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                <ArrowRightOutlined />
+                            </TextUnderline>
+
+                            <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                Game :
+                            </TextUnderline>
                         </div>
                         <div className="line2">
-                            <p className="">I define brand characteristics to anchor them in people’s consciousness.</p>
+                            <p className="">
+                                I define brand characteristics to anchor them in people’s
+                                <TextUnderline
+                                    borderheight={1}
+                                    style={{ fontSize: `${width <= 768 ? '16px' : '24px'}`, lineHeight: '0.5', fontWeight: '400', margin: '0 5px' }}
+                                >
+                                    consciousness.
+                                </TextUnderline>
+                            </p>
                         </div>
                     </div>
                 </div>
