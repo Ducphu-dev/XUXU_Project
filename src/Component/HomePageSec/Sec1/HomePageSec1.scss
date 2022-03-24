@@ -1,0 +1,85 @@
+@import "../../../Assets/style/variables";
+
+.home-section_1{
+    width: 100%;
+    padding: 100px 30px;
+    p,h3{
+        margin-bottom: unset;
+    }
+    .w-7{
+        width: 70%;
+        flex: 0 0 70%;
+    }
+    .w-3{
+        width: 30%;
+        flex: 0 0 30%;
+    }
+    .title-head{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 180px;
+        &>*{
+            display: flex;
+            align-items: center;
+            
+        }
+        h3{
+            font-size: 100px;
+            font-weight: 600;
+        }
+    }
+    .home-about{
+        display: flex;
+
+        &_left{
+            .image{
+                width: 100%;
+                position: relative;
+                padding-bottom: 70%;
+                &-wrapper{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+        &_right{
+            // height: 100%;
+            background-color: map-get($color, gray-1 ) ;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            *{
+                font-size: 18px;
+            }
+            &-link{
+                margin-top: auto;
+                &>*{
+                    color: map-get($color, b );
+                }
+            }
+        }
+    }
+    .home-intro{
+        display: flex;
+        &_left{
+            padding-top: 150px;
+            &-decs{
+                font-size: 24px;
+            }
+        }
+        &_right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: map-get($color, b );
+            h3{
+                color: map-get($color, w );
+                font-size: 36px;
+            }
+        }
+    }
+}

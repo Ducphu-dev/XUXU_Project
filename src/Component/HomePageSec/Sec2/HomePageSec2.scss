@@ -1,0 +1,22 @@
+@import "../../../Assets/style/variables";
+
+.home-section_2{
+    width: 100%;
+    padding: 0 30px;
+    background-color: map-get($color, main );
+    p,h3{
+        margin-bottom: unset;
+    }
+    &>*,a{
+        color: map-get($color, w );
+    }
+    .w-7{
+        width: 70%;
+        flex: 0 0 70%;
+    }
+    .w-3{
+        width: 30%;
+        flex: 0 0 30%;
+    }
+    
+}
