@@ -3,9 +3,8 @@
 
 #header {
   background-color: map-get($map: $color, $key: w);
-  position: fixed;
-  left: 0;
-  right: 0;
+  width: 100%;
+  position: sticky;
   top: 0;
   .header-container {
     margin: 0 30px;
