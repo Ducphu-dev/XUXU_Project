@@ -1,0 +1,91 @@
+@import '../../Assets/style/variables';
+
+.works {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 100%;
+        border-bottom: 1px solid map-get($map: $color, $key: main);
+
+        &-bar {
+            display: flex;
+            margin: 0;
+            gap: 25px;
+            width: 1200px;
+            justify-content: space-between;
+        }
+        &-item {
+            &:hover {
+                .nav-link {
+                    color: map-get($map: $color, $key: red-1);
+                }
+            }
+        }
+        &-link,
+        .languages,
+        .lang span {
+            font-size: 26px;
+            font-weight: 500;
+            color: map-get($map: $color, $key: main);
+            letter-spacing: -0.18px;
+        }
+        &-link {
+            &.active {
+                color: map-get($map: $color, $key: red-1);
+            }
+        }
+        .languages {
+            display: flex;
+            align-items: center;
+            margin-left: 90px;
+            cursor: pointer;
+            &-toggle-icon {
+                margin-left: 10px;
+            }
+        }
+        .toggle-menu {
+            display: none;
+            cursor: pointer;
+            font-size: 28px;
+            transition: all 0.5s;
+        }
+    }
+
+    &-desc {
+        display: flex;
+        justify-content: space-between;
+        margin: 95px 47px 255px 30px;
+    }
+    &-content {
+        max-width: 1063px;
+        p {
+            text-align: right;
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            font-family: $montserrat;
+            margin-bottom: 0;
+            color: #111;
+        }
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        font-family: $montserrat;
+        color: #111;
+
+    }
+    &-product {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+    }
+}
