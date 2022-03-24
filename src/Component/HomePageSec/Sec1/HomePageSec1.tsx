@@ -25,27 +25,27 @@ function HomePageSec1(props:any) {
                     <h3 className='mr-left'>XU</h3>
                 </div>
             </div>
-            <div className="home-about">
-                <div className="w-7 home-about_left ">
+            <div className="home-1-about">
+                <div className="w-7 home-1-about_left ">
                     <div className="image">
                         <div className="image-wrapper">
                             <img src={ImgAbout} alt="" />
                         </div>
                     </div>
                 </div>
-                <div className="w-3 home-about_right">
-                    <div className="home-about_right-decs">
+                <div className="w-3 home-1-about_right">
+                    <div className="home-1-about_right-decs">
                         <p>XUXU is artist based in Califonia.</p>
                     </div>
-                    <div className="home-about_right-link">
+                    <div className="home-1-about_right-link">
                         <a href="">View About</a>
                     </div>
                 </div>
                 
             </div>
-            <div className="home-intro">
-                <div className="w-7 home-intro_left ">
-                    <div className="home-intro_left-decs">
+            <div className="home-1-intro">
+                <div className="w-7 home-1-intro_left ">
+                    <div className="home-1-intro_left-decs">
                         {
                             decs.map((items: any)=>
                                 <p>{items}</p>
@@ -53,8 +53,8 @@ function HomePageSec1(props:any) {
                         }
                     </div>
                 </div>
-                <div className="w-3 home-intro_right">
-                    <div className="home-intro_right-inside">
+                <div className="w-3 home-1-intro_right">
+                    <div className="home-1-intro_right-inside">
                         <h3>XUXU</h3>
                     </div>
                 </div>

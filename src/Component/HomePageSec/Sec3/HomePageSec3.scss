@@ -1,0 +1,42 @@
+@import "../../../Assets/style/variables";
+
+.home-section_3{
+    width: 100%;
+    background-color: map-get($color, w );
+    p,h3{
+        margin-bottom: unset;
+    }
+    &>*,a{
+        font-size: 18px;
+        // color: map-get($color, w );
+        transition: .3s ease;
+    }
+    .w-7{
+        width: 70%;
+        flex: 0 0 70%;
+    }
+    .w-3{
+        width: 30%;
+        flex: 0 0 30%;
+    }
+    &-wrapper{
+        max-width: 1920px;
+        margin: auto;
+        padding: 100px 30px;
+        // @media (max-width:1200px) {
+        //     padding: 100px 30px;
+        // }
+        // @media (max-width:900px) {
+        //     padding: 50px 30px;
+        // }
+    }
+    .home-3{
+        &_title{
+            margin-top: 85px;
+            margin-bottom: 200px;
+            max-width: 1070px;
+            margin-left: auto;
+            text-indent: 180px;
+        }
+    }
+}

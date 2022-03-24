@@ -3,6 +3,8 @@
 .home-section_1{
     width: 100%;
     padding: 100px 30px;
+    max-width: 1920px;
+    margin: auto;
     p,h3{
         margin-bottom: unset;
     }
@@ -29,7 +31,7 @@
             font-weight: 600;
         }
     }
-    .home-about{
+    .home-1-about{
         display: flex;
 
         &_left{
@@ -63,7 +65,7 @@
             }
         }
     }
-    .home-intro{
+    .home-1-intro{
         display: flex;
         &_left{
             padding-top: 150px;
