@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect, useState } from 'react';
 
 import './HomePageSec2.scss';
 import Img1 from "../../../Assets/images/HomePage/main-02@2x.png"
@@ -9,10 +9,51 @@ import Img6 from "../../../Assets/images/HomePage/main-06@2x.png"
 import Img7 from "../../../Assets/images/HomePage/main-07@2x.png"
 
 import HeadMore from '../../HeadMore/HeadMore';
+import TextUnderline from '../../../Component/TextUnderline/TextUnderline';
+
 function HomePageSec2(props:any) {
     
+    const [styleInfoTitle, setStyleInfoTitle] = useState<any>({
+        fontSize: `54px`,
+        fontFamily: '$montserrat',
+        marginRight: '20px',
+        fontWeight: '600',
+        marginBottom: '20px',
+        // lineHeight: '0.5',
+        color: '#ffffff',
+    });
+    const [borderHeightInfoTitle, setBorderHeightTitle] = useState<number>(5);
+    const title1 ="Fine art".split(' ').map((item:any, index:any) => (
+        <>
+            <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
+                {item}
+            </TextUnderline>
+        </>
+    ))
 
-    const title =["Fine","art"]
+    const title = <p>{title1}</p>
+    
+
+    const [styleInfoDecs, setStyleInfoDecs] = useState<any>({
+        fontSize: `18px`,
+        fontFamily: '$montserrat',
+        lineHeight: '0.8',
+        color: '#ffffff',
+        fontWeight: '400',
+        marginRight: '5px',
+    });
+    const [borderHeightInfoDecs, setBorderHeightDecs] = useState<number>(1);
+
+    const decs1 ="do eiusmod".split(' ').map((item:any, index:any) => (
+        <>
+            <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
+                {item}
+            </TextUnderline>
+        </>
+    ))
+    
+    const decs = <p>Lorem ipsum dolor sit amet, elit, sed {decs1} tempor incidid dolore magna aliqua. Ut enim ad min veniam,</p>
+
     
 
     return (
@@ -22,7 +63,9 @@ function HomePageSec2(props:any) {
                     Title={title}
                 />
                 <div className="home-2_title">
-                    <p>Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incidid dolore magna aliqua. Ut enim ad min veniam,</p>
+                    {
+                        decs
+                    }
                 </div>
                 <div className="home-2_images-1">
                     <div className="left">
@@ -60,7 +103,9 @@ function HomePageSec2(props:any) {
                 <div className="home-2_images-3">
                     <div className="left">
                         <div className="decs">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing  elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua. Ut enim ad minim veniam, </p>
+                            {
+                                decs
+                            }
                         </div>
                     </div>
                     <div className="right">

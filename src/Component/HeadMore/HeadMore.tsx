@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{ useEffect, useState }  from 'react';
+import TextUnderline from '../../Component/TextUnderline/TextUnderline';
 
 import './HeadMore.scss';
 function HeadMore(props:any) {
@@ -7,16 +8,19 @@ function HeadMore(props:any) {
 
     let leftHead 
 
+    
+    
+
     if(Title) {
         leftHead = <div className="head-more_title">
-                        <p>{Title}</p>
+                        {Title}
                     </div>
     } else if (Decs){
         leftHead = <div className="head-more_decs">
                         {
-                            Decs.map((items: any)=>
-                                <p>{items}</p>
-                            )
+                            <>
+                                {Decs}
+                            </>
                         }
                     </div>
     } else{
