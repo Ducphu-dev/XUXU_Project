@@ -57,7 +57,6 @@ const Works = (props: Props) => {
     const [styleHeading, setStyleHeading] = useState({
         fontSize: `54px`,
         fontFamily: '$montserrat',
-        marginRight: '25px',
         fontWeight: '600',
         lineHeight: '1.1',
         color: '#040404',
@@ -68,7 +67,6 @@ const Works = (props: Props) => {
         fontSize: `24px`,
         fontFamily: '$montserrat',
         marginRight: '10px',
-        marginLeft: '10px',
         fontWeight: '400',
         marginBottom: '10px',
         lineHeight: '0.5',
@@ -80,7 +78,6 @@ const Works = (props: Props) => {
             setStyleHeading({
                 fontSize: `54px`,
                 fontFamily: '$montserrat',
-                marginRight: '25px',
                 fontWeight: '600',
                 lineHeight: '1.1',
                 color: '#040404',
@@ -90,7 +87,6 @@ const Works = (props: Props) => {
                 fontSize: `24px`,
                 fontFamily: '$montserrat',
                 marginRight: '5px',
-                marginLeft: '5px',
                 fontWeight: '400',
                 marginBottom: '10px',
                 lineHeight: '0.5',
@@ -114,7 +110,7 @@ const Works = (props: Props) => {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/works" className="nav-link">
+                        <a href="/works" className="nav-link active">
                             Fineart
                         </a>
                     </li>
@@ -149,13 +145,13 @@ const Works = (props: Props) => {
                 </div>
                 <div className="works-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius</p>
-                    mod tempor
+                    mod tempor&nbsp;
                     {underline1.split(' ').map((item: string, index: number) => (
                         <TextUnderline key={index} style={styleUnderline1} borderheight={borderHeight1}>
                             {item}
                         </TextUnderline>
                     ))}
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea&nbsp;
                     {underline2.split(' ').map((item, index) => (
                         <TextUnderline key={index} style={styleUnderline1} borderheight={borderHeight1}>
                             {item}
