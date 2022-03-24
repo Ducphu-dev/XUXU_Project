@@ -1,15 +1,20 @@
 import React from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Header from '../../Component/Header/Header';
-// import Header from '../../Component/Header/Header';
-// import Footer from '../../Component/Footer/Footer';
 import { RouterString } from '../../Component/Modules/routesString';
+import Footer from '../Footer/Footer';
 import pages from './pages';
 
 const RenderHeader = (isHeader: boolean) => {
   let active = false;
   if (!isHeader) {
     return <Header />;
+  }
+};
+const RenderFooter = (isFooter: boolean) => {
+  let active = false;
+  if (!isFooter) {
+    return <Footer />;
   }
 };
 
@@ -41,7 +46,7 @@ function RouterWrapper() {
         })}
         <Redirect to={RouterString.PageNotFound} />
       </Switch>
-      {/* <Footer/> */}
+      {RenderFooter(isHistoryCheck())}
     </>
   );
 }
