@@ -4,21 +4,11 @@ import about1 from '../../Assets/images/About/about-01.png';
 import about2 from '../../Assets/images/About/about-02-mov.png';
 import about3 from '../../Assets/images/About/about-02.png';
 import { ArrowRightOutlined } from '@ant-design/icons';
+import TextUnderline from '../../Component/TextUnderline/TextUnderline';
 
 type Props = {};
 
-const textUnderline1 = [
-    {
-        text: 'XUXU',
-        color: '#040404',
-        fontSize: 54,
-        fontWeight: 600,
-    },
-    {
-        text: 'Profile',
-    },
-];
-
+const textUnderline1 = 'XUXU Profile';
 const textUnderline2 = [
     {
         text: 'This',
@@ -104,7 +94,13 @@ const About = (props: Props) => {
     return (
         <div className="about-container">
             <div className="about-heading">
-                <h1>XUXU About</h1>
+                {textUnderline1.split(' ').map((item, index) => (
+                    <>
+                        <TextUnderline bottom={0} key={index} style={{ fontSize: '54px', fontFamily: 'Montserrat-SemiBold', marginRight: '25px' }} borderheight={5}>
+                            {item}
+                        </TextUnderline>
+                    </>
+                ))}
             </div>
             <div className="about-banner1">
                 <img src={about1} alt="" />

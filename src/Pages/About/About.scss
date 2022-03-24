@@ -5,7 +5,8 @@
     &-container {
     }
     &-heading {
-        margin: 99px 30px 0px 30px;
+        margin: 99px 30px 30px 30px;
+        height: 70px;
     }
 
     &-banner1 {
@@ -173,7 +174,7 @@
             }
         }
         &-heading {
-            margin: 50px 30px 0px 30px;
+            margin: 50px 30px 30px 30px;
         }
         &-info1 {
             margin: 50px 30px 100px 30px;
@@ -206,7 +207,7 @@
     }
     @media screen and (max-width: 1023.98px) {
         &-heading {
-            margin: 50px 15px 0px 15px;
+            margin: 50px 15px 30px 15px;
         }
         &-info1 {
             margin: 30px 15px 70px 15px;
