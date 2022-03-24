@@ -35,17 +35,17 @@ function Header() {
 
           <ul className={`${isMenuShow ? 'nav-bar active' : 'nav-bar'}`}>
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <a href="/about" className="nav-link">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link">
-                Work
+              <a href="/work" className="nav-link">
+                Works
               </a>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <a href="/contact" className="nav-link">
                 Contact
               </a>
             </li>
