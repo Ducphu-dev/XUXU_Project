@@ -1,19 +1,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import '../../Assets/style/variables';
 
 #header {
+  background-color: map-get($map: $color, $key: w);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  .header-container {
+    margin: 0 30px;
+  }
   .nav {
     display: flex;
     align-items: center;
+    height: $header-height;
     .logo {
       margin-right: auto;
+      &:hover {
+        h1 {
+          color: map-get($map: $color, $key: red-1);
+        }
+      }
       h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $montserrat;
         font-weight: 700;
+        font-size: 30px;
+        margin: 0;
+        color: map-get($map: $color, $key: main);
+        transition: all ease 0.2s;
       }
     }
     &-bar {
       display: flex;
       margin: 0;
+      gap: 25px;
+    }
+    &-item {
+      &:hover {
+        .nav-link {
+          color: map-get($map: $color, $key: red-1);
+        }
+      }
+    }
+    &-link,
+    .languages,
+    .lang span {
+      font-size: 18px;
+      font-weight: 500;
+      color: map-get($map: $color, $key: main);
+      letter-spacing: -0.18px;
+      text-transform: uppercase;
+    }
+    &-link {
+      &.active {
+        color: map-get($map: $color, $key: red-1);
+      }
+    }
+    .languages {
+      display: flex;
+      align-items: center;
+      margin-left: 90px;
+      cursor: pointer;
+      &-toggle-icon {
+        margin-left: 10px;
+      }
+    }
+    .toggle-menu {
+      display: none;
+      cursor: pointer;
+      font-size: 28px;
+      transition: all 0.5s;
+    }
+    .lang {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav {
+      .toggle-menu {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        color: map-get($map: $color, $key: main);
+        &.active {
+          color: map-get($map: $color, $key: w);
+        }
+      }
+      .languages {
+        display: none;
+      }
+      .lang {
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        top: 64px;
+        right: 30px;
+        gap: 10px;
+        span {
+          color: map-get($map: $color, $key: w);
+          transition: all 0.5s;
+          cursor: pointer;
+          &.active {
+            color: map-get($map: $color, $key: red-1);
+          }
+        }
+      }
+      &-bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 450px;
+        padding: 150px 50px 50px 32px;
+
+        background-color: black;
+        color: map-get($map: $color, $key: w);
+        z-index: 1;
+        transition: all 0.5s;
+
+        transform: translateX(100%);
+        &.active {
+          transform: translateX(0);
+        }
+      }
+      &-link {
+        color: inherit;
+        font-size: 35px;
+        transition: all 0.5s;
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .nav {
+      &-bar {
+        width: 250px;
+      }
+      &-link {
+        font-size: 25px;
+      }
+      .lang span {
+        font-size: 14px;
+      }
     }
   }
 }
