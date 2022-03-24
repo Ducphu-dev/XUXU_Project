@@ -2,6 +2,7 @@ import { RouterString } from '../../../src/Component/Modules/routesString';
 import Main from '../Main/Main';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 const pages = [
   {
@@ -20,7 +21,12 @@ const pages = [
     path: RouterString.About,
     component: About,
     exact: true,
-  }
+  },
+  {
+    path: RouterString.Contact,
+    component: Contact,
+    exact: true,
+  },
 ];
 
 export default pages;
