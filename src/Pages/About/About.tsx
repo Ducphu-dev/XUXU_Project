@@ -120,8 +120,8 @@ const About = (props: Props) => {
             setBorderHeightInfo1(3);
             setStyleInfo2({
                 ...styleInfo2,
-                fontSize: '23.1px',
-                marginBottom: '20px',
+                fontSize: '16px',
+                marginBottom: '15px',
             });
 
             setStyleInfo3({
