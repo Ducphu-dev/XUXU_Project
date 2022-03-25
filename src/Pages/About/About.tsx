@@ -3,6 +3,7 @@ import './About.scss';
 import about1 from '../../Assets/images/About/about-01.png';
 import about2 from '../../Assets/images/About/about-02-mov.png';
 import about3 from '../../Assets/images/About/about-02.png';
+import arrow from '../../Assets/images/About/arrow.png';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import TextUnderline from '../../Component/TextUnderline/TextUnderline';
 import useWindowSize from '../../Utils/useWindowSize/useWindowSize';
@@ -342,7 +343,7 @@ const About = (props: Props) => {
                     <div className="about-info3-right-text">
                         <div className="line1">
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                <ArrowRightOutlined />
+                            <img className="img-arrow" src={arrow} alt=""/>
                             </TextUnderline>
 
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
@@ -365,7 +366,8 @@ const About = (props: Props) => {
                     <div className="about-info3-right-text">
                         <div className="line1">
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                <ArrowRightOutlined />
+                                {/* <ArrowRightOutlined /> */}
+                                <img className="img-arrow" src={arrow} alt=""/>
                             </TextUnderline>
 
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
@@ -388,7 +390,7 @@ const About = (props: Props) => {
                     <div className="about-info3-right-text">
                         <div className="line1">
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                <ArrowRightOutlined />
+                            <img className="img-arrow" src={arrow} alt=""/>
                             </TextUnderline>
 
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
@@ -411,7 +413,7 @@ const About = (props: Props) => {
                     <div className="about-info3-right-text">
                         <div className="line1">
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                <ArrowRightOutlined />
+                            <img className="img-arrow" src={arrow} alt=""/>
                             </TextUnderline>
 
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
@@ -434,7 +436,7 @@ const About = (props: Props) => {
                     <div className="about-info3-right-text">
                         <div className="line1">
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                <ArrowRightOutlined />
+                            <img className="img-arrow" src={arrow} alt=""/>
                             </TextUnderline>
 
                             <TextUnderline bottom={0} style={styleInfo3} borderheight={borderHeightInfo3}>
