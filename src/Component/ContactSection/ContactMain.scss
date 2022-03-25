@@ -1,0 +1,117 @@
+@import '../../Assets/style/variables';
+
+.contact-main {
+  background-color: map-get($map: $color, $key: w);
+  margin: 0 30px;
+  &-container {
+    max-width: 1570px;
+    margin: auto;
+  }
+  &-content {
+    display: flex;
+    margin: 100px 0 145px;
+    gap: 68px;
+  }
+  .contact-about,
+  .contact-form {
+    flex: 1;
+  }
+  .contact-about {
+    &-desc {
+      font-size: 18px;
+      line-height: 30px;
+      color: map-get($map: $color, $key: main);
+      margin-top: 70px;
+      margin-bottom: 0;
+    }
+    &-sub-title-wr {
+      margin-top: 110px;
+    }
+    &-sub-title {
+      font-size: 36px;
+    }
+    .button-gr {
+      display: flex;
+      margin-top: 70px;
+      gap: 10px;
+      flex-wrap: wrap;
+      .button {
+        font-size: 18px;
+        font-weight: 500;
+        border: 2px solid map-get($map: $color, $key: main);
+        color: map-get($map: $color, $key: main);
+        height: 43px;
+      }
+    }
+  }
+  .contact-form {
+    margin-top: 45px;
+    .user-box {
+      position: relative;
+      width: 100%;
+      &-label {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 24px;
+        color: map-get($map: $color, $key: main);
+        pointer-events: none;
+        transition: 0.5s;
+      }
+      &-input {
+        padding-bottom: 27px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #999999;
+
+        font-size: 18px;
+        background: transparent;
+        outline: none;
+        color: map-get($map: $color, $key: main);
+        font-weight: 500;
+      }
+      .user-box-input:focus ~ .user-box-label,
+      .user-box-input:valid ~ .user-box-label {
+        top: -20px;
+        left: 0;
+        font-size: 12px;
+      }
+    }
+    .user-box + .user-box {
+      margin-top: 50px;
+    }
+    &-bottom {
+      margin-top: 100px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    &-content {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-about {
+      &-title {
+        font-size: 34px;
+      }
+      &-sub-title-wr {
+        margin-top: 68px;
+      }
+      &-sub-title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .contact-form {
+      .user-box {
+        &-label {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
