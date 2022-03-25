@@ -1,15 +1,16 @@
 import React,{ useEffect, useState } from 'react';
 import useWindowSize from '../../../Utils/useWindowSize/useWindowSize';
-
 // Import  styles
 import './HomePageSec6.scss';
 
 import Img1 from "../../../Assets/images/HomePage/main-16@2x.png"
 import Img2 from "../../../Assets/images/HomePage/main-17@2x.png"
 import Img3 from "../../../Assets/images/HomePage/main-18@2x.png"
+import arrow from '../../../Assets/images/About/arrow.png';
 
 import HeadMore from '../../HeadMore/HeadMore';
 import TextUnderline from '../../../Component/TextUnderline/TextUnderline';
+import { Link } from 'react-router-dom';
 function HomePageSec6(props:any) {
     
     const { width, height } = useWindowSize();
@@ -34,12 +35,12 @@ function HomePageSec6(props:any) {
     ))
 
     const title = <p>{title1}</p>
+    const titleLink = <p>{title1}</p>
 
     
 
     const decs1 = "Game Art"
     const decs2 = "Movie Art"
-
     const [styleInfoDecs, setStyleInfoDecs] = useState<any>({
         fontSize: `24px`,
         fontFamily: '$montserrat',
@@ -51,6 +52,7 @@ function HomePageSec6(props:any) {
     });
     const [borderHeightInfoDecs, setBorderHeightDecs] = useState<number>(3);
 
+    
     useEffect(() => {
         if (width > 1024) {
             setStyleInfoDecs({
@@ -137,7 +139,7 @@ function HomePageSec6(props:any) {
                 color: '#000000',
             });
             setBorderHeightTitle(3);
-        }else if (width <= 768 && width > 480) {
+        }else if (width <= 480 && width > 320) {
             setStyleInfoDecs({
                 fontSize: `18px`,
                 fontFamily: '$montserrat',
@@ -241,7 +243,18 @@ function HomePageSec6(props:any) {
                         </div>
                     </div>
                 </div>
+                <Link to="/contact" className="home-6_contactLink">
+                    <TextUnderline bottom={0} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
+                        <img className="img-arrow" src={arrow} alt=""/>
+                    </TextUnderline>
+
+                    <TextUnderline bottom={0} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
+                        Contact
+                    </TextUnderline>
+                </Link>
+                
             </div>
+            
         </div>
         
     );

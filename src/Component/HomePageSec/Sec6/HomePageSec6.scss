@@ -57,6 +57,23 @@ $padding : 30px;
             padding: 0 15px;
         }
     }
+    .home-6_contactLink{
+        display: inline-block;
+        margin-top: 150px;
+        .img-arrow {
+            max-width: 30px;
+            max-height: 30px;
+        }
+        @media (max-width:1200px) {
+            margin-top: 100px;
+        }
+        @media (max-width:900px) {
+            margin-top: 50px;
+        }
+        @media (max-width:768px) {
+            margin-top: 30px;
+        }
+    }
     .home-6{
         position: relative;
         margin-top: 85px;

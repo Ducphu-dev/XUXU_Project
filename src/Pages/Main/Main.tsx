@@ -19,7 +19,6 @@ function Main(props: any) {
       <HomePageSec4/>
       <HomePageSec5/>
       <HomePageSec6/>
-      <Header />
     </>
   );
 }
