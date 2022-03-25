@@ -105,7 +105,7 @@ const Works = (props: Props) => {
             <nav className="nav">
                 <ul className={`${isMenuShow ? 'nav-bar active' : 'nav-bar'}`}>
                     <li className="nav-item">
-                        <a href="/about" className="nav-link">
+                        <a href="/#" className="nav-link">
                             All
                         </a>
                     </li>
@@ -115,22 +115,22 @@ const Works = (props: Props) => {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/contact" className="nav-link">
+                        <a href="/#" className="nav-link">
                             Graphicdesign
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/contact" className="nav-link">
+                        <a href="/#" className="nav-link">
                             Illustration
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/contact" className="nav-link">
+                        <a href="/#" className="nav-link">
                             Advertising
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/contact" className="nav-link">
+                        <a href="/#" className="nav-link">
                             Game
                         </a>
                     </li>
