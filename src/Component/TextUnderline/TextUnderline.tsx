@@ -8,10 +8,22 @@ interface TextUnderlineProps {
   children: any;
   bottom?: number;
   className?: string;
+  href?: string;
 }
 
 function TextUnderline(props: TextUnderlineProps) {
-  const { style, borderheight, children, bottom, className } = props;
+  const { style, borderheight, children, bottom, className, href } = props;
+  if (href) {
+    <Text
+      style={style}
+      borderheight={borderheight}
+      bottom={bottom}
+      className={className}
+      href={href}
+    >
+      {children}
+    </Text>;
+  }
   return (
     <Text
       style={style}
@@ -24,7 +36,28 @@ function TextUnderline(props: TextUnderlineProps) {
   );
 }
 
-const Text = styled.span<{ borderheight: any; bottom: any }>`
+const Text = styled.span<{ borderheight: any; bottom: any; href?: any }>`
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 600;
+  color: #111111;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: ${({ bottom }) => (bottom ? `${bottom}px` : '-5px')};
+    left: 0;
+    right: 0;
+    height: ${({ borderheight }) =>
+      borderheight ? `${borderheight}px` : '5px'};
+    background-color: ${(props) =>
+      props.style?.color ? props.style.color : '#111111'};
+  }
+`;
+
+const Link = styled.a<{ borderheight: any; bottom: any }>`
   font-size: 54px;
   line-height: 64px;
   font-weight: 600;
