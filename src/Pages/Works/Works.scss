@@ -1,0 +1,178 @@
+@import '../../Assets/style/variables';
+
+.works {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 100%;
+        border-bottom: 1px solid map-get($map: $color, $key: main);
+
+        &-bar {
+            display: flex;
+            margin: 0;
+            gap: 25px;
+            width: 1200px;
+            justify-content: space-between;
+        }
+        &-item {
+            &:hover {
+                .nav-link {
+                    color: map-get($map: $color, $key: red-1);
+                }
+            }
+        }
+        &-link,
+        .languages,
+        .lang span {
+            font-size: 26px;
+            font-weight: 500;
+            color: map-get($map: $color, $key: main);
+            letter-spacing: -0.18px;
+        }
+        &-link {
+            &.active {
+                color: map-get($map: $color, $key: red-1);
+            }
+        }
+        .languages {
+            display: flex;
+            align-items: center;
+            margin-left: 90px;
+            cursor: pointer;
+            &-toggle-icon {
+                margin-left: 10px;
+            }
+        }
+        .toggle-menu {
+            display: none;
+            cursor: pointer;
+            font-size: 28px;
+            transition: all 0.5s;
+        }
+    }
+
+    &-desc {
+        display: flex;
+        justify-content: space-between;
+        margin: 95px 47px 255px 30px;
+    }
+    &-content {
+        max-width: 1060px;
+        p {
+            text-align: right;
+            font-size: 24px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            font-family: $montserrat;
+            margin-bottom: 0;
+            color: #111;
+        }
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        font-family: $montserrat;
+        color: #111;
+
+    }
+    &-product {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+    }
+    @media screen and (max-width: 1279.99px) {
+        &-title {
+            flex: 0.3;
+        }
+        &-content {
+            flex: 0.7;
+        }
+        .nav {
+            &-bar {
+                max-width:100%;
+                padding: 0px 30px;
+            }
+        }
+        &-desc {
+            margin: 50px 30px 100px 30px;
+            flex-direction: column;
+            gap: 30px;
+        }
+ 
+        &-content {
+            width: auto;
+            p {
+                text-align: left;
+            }
+        }
+    }
+    @media screen and (max-width: 1023.98px) {
+
+        &-title {
+            flex: 0.3;
+        }
+        &-content {
+            flex: 0.7;
+        }
+        .nav {
+            &-bar {
+            }
+            &-link {
+                font-size: 20px;
+            }
+        }  
+       
+
+    }
+    @media screen and (max-width: 767.98px) {
+        .nav {
+            height: auto;
+            border-bottom: unset;
+            &-bar {
+                flex-direction: column;
+                align-items: center;
+                justify-content:space-evenly;
+                gap: 15px;
+            }
+            &-link {
+            }
+            &-item  {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #040404;
+            }
+        }   
+        &-desc {
+            margin: 30px 30px 30px 30px;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &-title {
+            align-self: center;
+        }
+        &-content {
+            width: auto;
+            p {
+                text-align: left;
+            }
+        }
+        &-product {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px 0px;
+            
+        }
+    
+    }
+    
+    
+    
+}
