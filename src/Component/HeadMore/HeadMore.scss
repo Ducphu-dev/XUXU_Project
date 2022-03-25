@@ -1,0 +1,25 @@
+@import "../../Assets/style/variables";
+
+.head-more{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    p,h3{
+        margin-bottom: unset;
+    }
+    display: flex;
+    &_title{
+        font-size: 54px;
+    }
+    &_decs{
+        font-size: 24px;
+        max-width: 850px;
+    }
+    &_link{
+        &>*{
+            font-family: Montserrat-SemiBold;
+            color: map-get($color, main );
+            text-decoration: underline;
+        }
+    }
+}

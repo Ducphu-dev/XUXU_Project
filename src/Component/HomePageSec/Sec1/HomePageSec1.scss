@@ -1,0 +1,140 @@
+@import "../../../Assets/style/variables";
+
+.home-section_1{
+    width: 100%;
+    
+   
+    p,h3{
+        margin-bottom: unset;
+    }
+    .w-7{
+        width: 65%;
+        flex: 0 0 65%;
+        @media (max-width:768px) {
+            width: 100%;
+            flex: 0 0 100%;
+            
+        }
+    }
+    .w-3{
+        width: 35%;
+        flex: 0 0 35%;
+        @media (max-width:768px) {
+            width: 100%;
+            flex: 0 0 100%;
+            
+        }
+    }
+    &-wrapper{
+        max-width: 1920px;
+        margin: auto;
+        padding: 100px 30px;
+    }
+    .title-head{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 180px;
+        flex-wrap: wrap;
+        @media (max-width:1200px) {
+            margin-top: 130px;
+            
+        }
+        @media (max-width:900px) {
+            margin-top: 80px;
+            
+        }
+        &>*{
+            display: flex;
+            align-items: center;
+            
+        }
+        h3{
+            font-size: 100px;
+            font-weight: 600;
+        }
+        &_right{
+            @media (max-width:768px) {
+               display: none;
+                
+            }
+        }
+    }
+    .home-1-about{
+        display: flex;
+        flex-wrap: wrap;
+        &_left{
+            .image{
+                width: 100%;
+                position: relative;
+                padding-bottom: 60%;
+                &-wrapper{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+        &_right{
+            // height: 100%;
+            background-color: map-get($color, gray-1 ) ;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            @media (max-width:1200px) {
+                padding: 30px;
+            }
+            @media (max-width:900px) {
+                padding: 20px;
+            }
+            *{
+                font-size: 18px;
+            }
+            &-decs>*:not(:last-child){
+                margin-bottom: 15px;
+            }
+            &-link{
+                margin-top: auto;
+                @media (max-width:768px) {
+                    margin-top: 40px;
+                }
+                &>*{
+                    color: map-get($color, b );
+                }
+            }
+        }
+    }
+    .home-1-intro{
+        display: flex;
+        flex-wrap: wrap;
+        &_left{
+            padding-top: 150px;
+            @media (max-width:900px) {
+                padding-top: 100px;
+            }
+            @media (max-width:768px) {
+                padding:15px;
+            }
+            &-decs{
+                padding-right: 50px;
+                font-size: 24px;
+                @media (max-width:768px) {
+                    padding-right: 0;
+                }
+            }
+        }
+        &_right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: map-get($color, b );
+            min-height: 150px;
+            h3{
+                color: map-get($color, w );
+                font-size: 36px;
+            }
+        }
+    }
+}

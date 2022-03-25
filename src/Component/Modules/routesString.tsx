@@ -3,4 +3,5 @@ export const RouterString = {
   PageNotFound: '/404',
   About: '/about',
   Contact: '/contact',
+  Works: '/works',
 };
