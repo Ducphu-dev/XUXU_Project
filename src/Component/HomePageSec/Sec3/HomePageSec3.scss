@@ -40,7 +40,10 @@
             padding: 50px 30px;
         }
         @media (max-width:900px) {
-            padding: 30px;
+            padding: 50px 30px;
+        }
+        @media (max-width:768px) {
+            padding: 30px 15px ;
         }
     }
     .home-3{
@@ -67,12 +70,14 @@
             @media (max-width:768px) {
                 margin-bottom: 50px;
                 text-indent: 50px;
+                font-size: 16px;
             }
         }
         &-items{
             
             @media (max-width:768px) {
                 margin-bottom: 30px;
+                background-color: map-get($color, gray-1);
             }
             .home-3-img{
                 width: 100%;

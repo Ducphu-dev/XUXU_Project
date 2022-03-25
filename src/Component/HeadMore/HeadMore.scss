@@ -4,6 +4,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media (max-width:768px) {
+        flex-direction: column;
+    }
     p,h3{
         margin-bottom: unset;
     }
@@ -14,12 +17,30 @@
     &_decs{
         font-size: 24px;
         max-width: 850px;
+        @media (max-width:1024px) {
+            font-size: 22px;
+        }
+        @media (max-width:900px) {
+            font-size: 20px;
+        }
+        @media (max-width:768px) {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        @media (max-width:480px) {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
     }
     &_link{
         &>*{
             font-family: Montserrat-SemiBold;
             color: map-get($color, main );
             text-decoration: underline;
+            transition: .3s ease;
+            &:hover{
+                color: map-get($color, red-1 );
+            }
         }
     }
 }

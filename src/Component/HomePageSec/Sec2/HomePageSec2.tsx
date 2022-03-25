@@ -1,4 +1,6 @@
 import React,{ useEffect, useState } from 'react';
+import useWindowSize from '../../../Utils/useWindowSize/useWindowSize';
+
 
 import './HomePageSec2.scss';
 import Img1 from "../../../Assets/images/HomePage/main-02@2x.png"
@@ -12,6 +14,7 @@ import HeadMore from '../../HeadMore/HeadMore';
 import TextUnderline from '../../../Component/TextUnderline/TextUnderline';
 
 function HomePageSec2(props:any) {
+    const { width, height } = useWindowSize();
     
     const [styleInfoTitle, setStyleInfoTitle] = useState<any>({
         fontSize: `54px`,
@@ -54,7 +57,107 @@ function HomePageSec2(props:any) {
     
     const decs = <p>Lorem ipsum dolor sit amet, elit, sed {decs1} tempor incidid dolore magna aliqua. Ut enim ad min veniam,</p>
 
-    
+    useEffect(() => {
+        if (width > 1024) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#ffffff',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setBorderHeightDecs(1);
+            setStyleInfoTitle({
+                fontSize: `54px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '20px',
+                // lineHeight: '0.5',
+                color: '#ffffff',
+            });
+            setBorderHeightTitle(5);
+        }
+        if (width <= 1024 && width > 900) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#ffffff',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setBorderHeightDecs(1);
+            setStyleInfoTitle({
+                fontSize: `50px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '18px',
+                lineHeight: '1.3',
+                color: '#ffffff',
+            });
+            setBorderHeightTitle(4);
+        } else if (width <= 900 && width > 768) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#ffffff',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setBorderHeightDecs(1);
+            setStyleInfoTitle({
+                fontSize: `45px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '16px',
+                lineHeight: '1',
+                color: '#ffffff',
+            });
+            setBorderHeightTitle(3);
+        } else if (width <= 768 && width > 480) {
+            setStyleInfoDecs({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#ffffff',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setStyleInfoTitle({
+                fontSize: `40px`,
+                fontFamily: '$montserrat',
+                marginRight: '10px',
+                fontWeight: '600',
+                marginBottom: '14px',
+                lineHeight: '0.9',
+                color: '#ffffff',
+            });
+            setBorderHeightTitle(3);
+        } else if (width <= 320) {
+            setStyleInfoDecs({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#ffffff',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setStyleInfoTitle({
+                fontSize: `35px`,
+                fontFamily: '$montserrat',
+                marginRight: '10px',
+                fontWeight: '600',
+                marginBottom: '14px',
+                lineHeight: '0.9',
+                color: '#ffffff',
+            });
+        }
+    }, [width]);
 
     return (
         <div className= "home-section_2">

@@ -29,6 +29,18 @@
         max-width: 1920px;
         margin: auto;
         padding: 100px 30px;
+        @media (max-width:1024px) {
+            padding: 80px 30px;
+            
+        }
+        @media (max-width:900px) {
+            padding: 60px 30px;
+            
+        }
+        @media (max-width:768px) {
+            padding: 40px 15px;
+            
+        }
     }
     .title-head{
         width: 100%;
@@ -40,8 +52,12 @@
             margin-top: 130px;
             
         }
-        @media (max-width:900px) {
+        @media (max-width:1024px) {
             margin-top: 80px;
+            
+        }
+        @media (max-width:900px) {
+            margin-top: 30px;
             
         }
         &>*{
@@ -52,6 +68,22 @@
         h3{
             font-size: 100px;
             font-weight: 600;
+            @media (max-width:1024px) {
+                font-size: 80px;
+                
+            }
+            @media (max-width:900px) {
+                font-size: 60px;
+                
+            }
+            @media (max-width:768px) {
+                font-size: 40px;
+                
+            }
+            @media (max-width:320px) {
+                font-size: 30px;
+                
+            }
         }
         &_right{
             @media (max-width:768px) {
@@ -91,14 +123,20 @@
             }
             *{
                 font-size: 18px;
+                @media (max-width:768px) {
+                    font-size: 16px;
+                }
             }
             &-decs>*:not(:last-child){
                 margin-bottom: 15px;
+                @media (max-width:768px) {
+                    margin-bottom: 10px;
+                }
             }
             &-link{
                 margin-top: auto;
                 @media (max-width:768px) {
-                    margin-top: 40px;
+                    margin-top: 20px;
                 }
                 &>*{
                     color: map-get($color, b );
@@ -116,12 +154,38 @@
             }
             @media (max-width:768px) {
                 padding:15px;
+                background-color: map-get($color, gray-1 );
+                position: relative;
+                &::after{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    left: 0;
+                    height: 1px;
+                    content: "";
+                    background-color: map-get($color, main );
+                }
             }
             &-decs{
                 padding-right: 50px;
                 font-size: 24px;
+               
+                @media (max-width:1024px) {
+                    font-size: 22px;
+                }
+                @media (max-width:900px) {
+                    font-size: 20px;
+                }
                 @media (max-width:768px) {
                     padding-right: 0;
+                    font-size: 18px;
+                    // color: map-get($color, w );
+                }
+                @media (max-width:480px) {
+                    font-size: 16px;
+                }
+                p{
+                    margin-top: 10px;
                 }
             }
         }

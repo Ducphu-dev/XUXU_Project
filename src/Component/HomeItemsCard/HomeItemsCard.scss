@@ -1,0 +1,71 @@
+@import "../../Assets/style/variables";
+@import "../../Assets/style/mixins";
+
+.home-items_block{
+    width: 100%;
+    &:hover{
+        .home-items_infor{
+            &-title{
+                &>*{
+                    color: map-get($color, red-1 ) !important;
+                    &::after{
+                        background-color: map-get($color, red-1 ) !important;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .home-items{
+        width: 100%;
+        position: relative;
+        &_link{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+        &_img{
+            width: 100%;
+            position: relative;
+            padding-bottom: 60%;
+            .img-wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &_infor{
+            @media (max-width:768px) {
+                margin-bottom: 20px;
+            }
+            &-title{
+
+                &>*{
+                    
+                    transition: .3s ease;
+                    &::after{
+                        transition: .3s ease;
+                    }
+                   
+                }
+            }
+            &-decs{
+                &>*{
+                    transition: .3s ease;
+                    font-size: 18px;
+                    color: map-get($color, main );
+                    @include p-line-clamp(2);
+                    @media (max-width:768px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

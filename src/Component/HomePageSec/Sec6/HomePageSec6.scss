@@ -1,0 +1,165 @@
+@import "../../../Assets/style/variables";
+// var padding = 30
+$padding : 30px;
+.home-section_6{
+    width: 100%;
+    background-color: map-get($color, w );
+    padding: 100px 0;
+    @media (max-width:1200px) {
+        padding: 50px 0;
+    }
+    @media (max-width:900px) {
+        padding: 30px 0;
+    }
+    @media (max-width:768px) {
+        padding: 20px 0;
+    }
+    p,h3{
+        margin-bottom: unset;
+    }
+    .w-65{
+        width: 65%;
+        flex: 0 0 65%;
+        transition: .3s ease;
+        @media (max-width:768px) {
+            width: 100%;
+            flex: 0 0 100%;
+            
+        }
+    }
+    .w-35{
+        width: 35%;
+        flex: 0 0 35%;
+        transition: .3s ease;
+        @media (max-width:768px) {
+            width: 100%;
+            flex: 0 0 100%;
+            
+        }
+    }
+    &>*,a{
+        font-size: 18px;
+        // color: map-get($color, w );
+        transition: .3s ease;
+    }
+    &-wrapper{
+        max-width: 1920px;
+        margin: auto;
+        padding: 0 30px;
+        transition: .3s ease;
+        @media (max-width:1200px) {
+            padding: 0 30px;
+        }
+        @media (max-width:900px) {
+            padding: 0 30px;
+        }
+        @media (max-width:768px) {
+            padding: 0 15px;
+        }
+    }
+    .home-6{
+        position: relative;
+        margin-top: 85px;
+        width: 100%;
+        @media (max-width:1024px) {
+            margin-top: 75px;
+        }
+        @media (max-width:900px) {
+            margin-top: 65px;
+        }
+        @media (max-width:768px) {
+            margin-top: 55px;
+        }
+        @media (max-width:480px) {
+            margin-top: 45px;
+        }
+        &_wdecs{
+            margin-bottom: $padding;
+            &-img{
+                padding-right: $padding;
+                @media (max-width:768px) {
+                    padding-right: 0;
+                    margin-bottom: 20px;
+                }
+                img{
+                    height: auto;
+                }
+            }
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            &-decs{
+                max-width: 910px;
+                margin-left: auto;
+                @media (max-width:768px) {
+                    font-size: 16px;
+                }
+            }
+            &-infor{
+                margin-bottom: 70px;
+                @media (max-width:1024px) {
+                    margin-bottom: 50px;
+                }
+                @media (max-width:900px) {
+                    margin-bottom: 30px;
+                }
+                @media (max-width:768px) {
+                    margin-bottom: 20px;
+                }
+
+            }
+            &-items{
+                display: flex;
+                align-items: flex-start;
+                @media (max-width:768px) {
+                    flex-wrap: wrap;
+                }
+                &:not(:last-child){
+                    margin-bottom: 70px;
+                    @media (max-width:768px) {
+                        margin-bottom: 40px;
+                    }
+    
+                }
+                p{
+                    margin-left: 40px;
+                    @media (max-width:768px) {
+                        margin-left: 0;
+                        margin-top: 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &_imgs{
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            &-items{
+                @media (max-width:768px) {
+                    margin-bottom: 20px;
+    
+                }
+                &.w-35{
+                    padding-left: $padding;
+                    @media (max-width:768px) {
+                        padding-left: 0;
+        
+                    }
+                }
+            }
+            &-image{
+                width: 100%;
+                padding-bottom: 60%;
+                position: relative;
+                .img-wrapper{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
