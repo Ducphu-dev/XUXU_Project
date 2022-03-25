@@ -3,6 +3,7 @@ import Main from '../Main/Main';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
+import Works from '../Works/Works';
 
 const pages = [
   {
@@ -25,6 +26,11 @@ const pages = [
   {
     path: RouterString.Contact,
     component: Contact,
+    exact: true,
+  },
+  {
+    path: RouterString.Works,
+    component: Works,
     exact: true,
   },
 ];
