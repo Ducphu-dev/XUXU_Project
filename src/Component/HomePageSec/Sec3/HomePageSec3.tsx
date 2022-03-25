@@ -1,4 +1,6 @@
 import React,{ useEffect, useState } from 'react';
+import useWindowSize from '../../../Utils/useWindowSize/useWindowSize';
+
 
 import './HomePageSec3.scss';
 import Img1 from "../../../Assets/images/HomePage/main-08@2x.png"
@@ -9,6 +11,7 @@ import TextUnderline from '../../../Component/TextUnderline/TextUnderline';
 import ItemsBottom from './Sec3Items/Sec3Items';
 
 function HomePageSec3(props:any) {
+    const { width, height } = useWindowSize();
     
 
     const [styleInfoTitle, setStyleInfoTitle] = useState<any>({
@@ -61,6 +64,107 @@ function HomePageSec3(props:any) {
     const titleItemsleft = "2020 SK CES LED FACADE"
     const titleItemsright = "2018 LG CES"
     
+    useEffect(() => {
+        if (width > 1024) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setBorderHeightDecs(1);
+            setStyleInfoTitle({
+                fontSize: `54px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '20px',
+                // lineHeight: '0.5',
+                color: '#000000',
+            });
+            setBorderHeightTitle(5);
+        }
+        if (width <= 1024 && width > 900) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setBorderHeightDecs(1);
+            setStyleInfoTitle({
+                fontSize: `50px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '18px',
+                lineHeight: '1.3',
+                color: '#000000',
+            });
+            setBorderHeightTitle(4);
+        } else if (width <= 900 && width > 768) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setBorderHeightDecs(1);
+            setStyleInfoTitle({
+                fontSize: `45px`,
+                fontFamily: '$montserrat',
+                marginRight: '20px',
+                fontWeight: '600',
+                marginBottom: '16px',
+                lineHeight: '1',
+                color: '#000000',
+            });
+            setBorderHeightTitle(3);
+        } else if (width <= 768 && width > 480) {
+            setStyleInfoDecs({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setStyleInfoTitle({
+                fontSize: `40px`,
+                fontFamily: '$montserrat',
+                marginRight: '10px',
+                fontWeight: '600',
+                marginBottom: '14px',
+                lineHeight: '0.9',
+                color: '#000000',
+            });
+            setBorderHeightTitle(3);
+        } else if (width <= 320) {
+            setStyleInfoDecs({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setStyleInfoTitle({
+                fontSize: `35px`,
+                fontFamily: '$montserrat',
+                marginRight: '10px',
+                fontWeight: '600',
+                marginBottom: '14px',
+                lineHeight: '0.9',
+                color: '#000000',
+            });
+        }
+    }, [width]);
 
     return (
         <div className= "home-section_3">

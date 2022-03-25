@@ -1,0 +1,128 @@
+@import "../../../Assets/style/variables";
+// var padding = 30
+$padding : 30px;
+.home-section_4{
+    width: 100%;
+    background-color: map-get($color, w );
+    p,h3{
+        margin-bottom: unset;
+    }
+    &>*,a{
+        font-size: 18px;
+        // color: map-get($color, w );
+        transition: .3s ease;
+    }
+    &-wrapper{
+        max-width: 1920px;
+        margin: auto;
+        padding: 100px 30px;
+        transition: .3s ease;
+        @media (max-width:1200px) {
+            padding: 50px 30px;
+        }
+        @media (max-width:900px) {
+            padding: 50px 30px;
+        }
+        @media (max-width:768px) {
+            padding: 30px 15px ;
+            padding-top: 0;
+        }
+    }
+    .home-4{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -30px;
+        position: relative;
+        margin-top: 165px;
+        // width: 100%;
+        @media (max-width:1024px) {
+            margin-top: 135px;
+            
+        }
+        @media (max-width:900px) {
+            margin-top: 105px;
+            
+        }
+        @media (max-width:768px) {
+            margin-top: 75px;
+            
+        }
+        @media (max-width:480px) {
+            margin-top: 45px;
+            
+        }
+        &_title{
+            font-size: 27px;
+            color: map-get($color, main );
+            margin-bottom: 30px;
+            @media (max-width:1024px) {
+                font-size: 25px;
+            }
+            @media (max-width:900px) {
+                font-size: 23px;
+            }
+            @media (max-width:768px) {
+                font-size: 21px;
+                margin-bottom: 20px;
+            }
+            @media (max-width:480px) {
+                font-size: 19px;
+                margin-bottom: 15px;
+            }
+        }
+        .swiper{
+            width: 100%;
+            position: unset;
+            &-slide{
+                transition: .3s ease;
+            }
+            &-slide:not(.swiper-slide-active){
+                opacity: .35;
+            }
+            &-button-prev,
+            &-button-next{
+                opacity: 1;
+                top: 20px;
+                right: $padding;
+                &::after{
+                    font-size: 30px;
+                    color: map-get($color, b );
+                    @media (max-width:1920px) {
+                        font-size: 1.7vw;
+                    }
+                    @media (max-width:900px) {
+                        font-size: 20px;
+                        
+                    }
+                }
+            }
+            &-button-prev{
+                left: unset;
+                right: calc(#{$padding} + 5vw);
+                @media (max-width:900px) {
+                    right: calc(#{$padding} + 40px);
+                    
+                }
+            }
+        }
+        &-items{
+            
+            @media (max-width:768px) {
+                margin-bottom: 30px;
+            }
+            .home-4-img{
+                width: 100%;
+                padding-bottom: 55%;
+                position: relative;
+                .img-wrapper{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        
+    }
+}

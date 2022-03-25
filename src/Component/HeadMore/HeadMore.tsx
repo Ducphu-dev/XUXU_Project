@@ -1,5 +1,6 @@
 import React,{ useEffect, useState }  from 'react';
 import TextUnderline from '../../Component/TextUnderline/TextUnderline';
+import useWindowSize from '../../Utils/useWindowSize/useWindowSize';
 
 import './HeadMore.scss';
 function HeadMore(props:any) {
@@ -7,7 +8,7 @@ function HeadMore(props:any) {
     const {Title,Decs} = props
 
     let leftHead 
-
+    const { width, height } = useWindowSize();
     
     
 
