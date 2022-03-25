@@ -71,6 +71,22 @@
             font-family: $montserrat;
             margin-bottom: 0;
             color: #111;
+            // ---------- Phu add responsive
+            @media (max-width:1024px) {
+                font-size: 22px;
+            }
+            @media (max-width:900px) {
+                font-size: 20px;
+            }
+            @media (max-width:768px) {
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+            @media (max-width:480px) {
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+        // ----------
         }
         font-size: 24px;
         font-weight: normal;
@@ -80,6 +96,23 @@
         letter-spacing: normal;
         font-family: $montserrat;
         color: #111;
+
+        // ---------- Phu add responsive
+        @media (max-width:1024px) {
+            font-size: 22px;
+        }
+        @media (max-width:900px) {
+            font-size: 20px;
+        }
+        @media (max-width:768px) {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        @media (max-width:480px) {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        // ----------
 
     }
     &-product {
@@ -99,12 +132,18 @@
             &-bar {
                 max-width:100%;
                 padding: 0px 30px;
+                // ---------- Phu add responsive
+                @media (max-width:1024px) {
+                    padding: 0 15px;
+                }
+                // ----------
             }
         }
         &-desc {
             margin: 50px 30px 100px 30px;
             flex-direction: column;
             gap: 30px;
+            
         }
  
         &-content {
@@ -154,6 +193,11 @@
             margin: 30px 30px 30px 30px;
             flex-direction: column;
             gap: 30px;
+            // ---------- Phu add responsive
+            @media (max-width:1024px) {
+                margin: 30px 15px 30px 15px;
+            }
+            // ----------
         }
         &-title {
             align-self: center;

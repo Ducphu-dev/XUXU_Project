@@ -187,7 +187,12 @@ function HomePageSec1(props:any) {
                 <div className="title-head">
                     <div className="title-head_left w-7">
                         <h3>Artist</h3>
-                        <h3 className='mr-left'>XU</h3>
+                        {
+                            width <=768 ? 
+                            <h3 className='mr-left'>XUXU</h3>
+                            :
+                            <h3 className='mr-left'>XU</h3>
+                        }
                     </div>
                     <div className="title-head_right w-3">
                         <h3 className='mr-left'>XU</h3>

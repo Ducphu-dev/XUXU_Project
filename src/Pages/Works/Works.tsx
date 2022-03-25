@@ -94,9 +94,77 @@ const Works = (props: Props) => {
             setBorderHeight1(0.5);
         }
         if (width <= 1279 && width > 768) {
+            setStyleHeading({
+                fontSize: `50px`,
+                fontFamily: '$montserrat',
+                fontWeight: '600',
+                lineHeight: '1.1',
+                color: '#040404',
+            });
+            setBorderHeading(5);
+            setStyleUnderline1({
+                fontSize: `22px`,
+                fontFamily: '$montserrat',
+                marginRight: '5px',
+                fontWeight: '400',
+                marginBottom: '10px',
+                lineHeight: '0.5',
+            });
+            setBorderHeight1(0.5);
         } else if (width <= 768 && width > 480) {
+            setStyleHeading({
+                fontSize: `45px`,
+                fontFamily: '$montserrat',
+                fontWeight: '600',
+                lineHeight: '1.1',
+                color: '#040404',
+            });
+            setBorderHeading(5);
+            setStyleUnderline1({
+                fontSize: `20px`,
+                fontFamily: '$montserrat',
+                marginRight: '5px',
+                fontWeight: '400',
+                marginBottom: '10px',
+                lineHeight: '0.5',
+            });
+            setBorderHeight1(0.5);
         } else if (width <= 480 && width > 320) {
+            setStyleHeading({
+                fontSize: `40px`,
+                fontFamily: '$montserrat',
+                fontWeight: '600',
+                lineHeight: '1.1',
+                color: '#040404',
+            });
+            setBorderHeading(5);
+            setStyleUnderline1({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                marginRight: '5px',
+                fontWeight: '400',
+                marginBottom: '10px',
+                lineHeight: '0.5',
+            });
+            setBorderHeight1(0.5);
         } else if (width <= 320) {
+            setStyleHeading({
+                fontSize: `35px`,
+                fontFamily: '$montserrat',
+                fontWeight: '600',
+                lineHeight: '1.1',
+                color: '#040404',
+            });
+            setBorderHeading(5);
+            setStyleUnderline1({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                marginRight: '5px',
+                fontWeight: '400',
+                marginBottom: '10px',
+                lineHeight: '0.5',
+            });
+            setBorderHeight1(0.5);
         }
     }, [width]);
 
