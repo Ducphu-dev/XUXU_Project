@@ -207,11 +207,9 @@ const About = (props: Props) => {
         <div className="about-container">
             <div className="about-heading">
                 {textUnderline1.split(' ').map((item, index) => (
-                    <>
-                        <TextUnderline bottom={0} key={index} style={styleHeading} borderheight={borderHeighHeading}>
-                            {item}
-                        </TextUnderline>
-                    </>
+                    <TextUnderline bottom={0} key={index} style={styleHeading} borderheight={borderHeighHeading}>
+                        {item}
+                    </TextUnderline>
                 ))}
             </div>
             <div className="about-banner1">
@@ -221,47 +219,37 @@ const About = (props: Props) => {
                 <div className="about-info1-left">
                     <div>
                         {textUnderline21.split(' ').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
-                                    {item}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                {item}
+                            </TextUnderline>
                         ))}
                     </div>
                     <div>
                         {textUnderline22.split(' ').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
-                                    {item}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                {item}
+                            </TextUnderline>
                         ))}
                     </div>
                     <div>
                         {textUnderline23.split(' ').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
-                                    {item}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                {item}
+                            </TextUnderline>
                         ))}
                     </div>
                     <div>
                         {textUnderline24.split(' ').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
-                                    {item}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                {item}
+                            </TextUnderline>
                         ))}
                     </div>
                     <div>
                         {textUnderline25.split(' ').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
-                                    {item}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo1} borderheight={borderHeightInfo1}>
+                                {item}
+                            </TextUnderline>
                         ))}
                     </div>
                 </div>
@@ -299,20 +287,20 @@ const About = (props: Props) => {
                             points of views in which a problem can be solved.
                         </p>
                     </div>
-                    <p className="about-info2-left-text">
+                    <div className="about-info2-left-text">
                         <p>
                             I was able to present this talk internally at Huge, online at DDD and at a couple of live events during 2020. See all the
                             versions below:
                         </p>
-                    </p>
+                    </div>
                     <div>
                         {textUnderline3.split('.').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo2} borderheight={borderHeightInfo2}>
+                            <div key={index}>
+                                <TextUnderline bottom={0}  style={styleInfo2} borderheight={borderHeightInfo2}>
                                     {item}.
                                 </TextUnderline>
                                 <br />
-                            </>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -337,20 +325,16 @@ const About = (props: Props) => {
                 <div className="about-info3-left">
                     <div>
                         {textUnderline41.split(' ').map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                    {item}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                {item}
+                            </TextUnderline>
                         ))}
                     </div>
                     <div>
                         {textUnderline42.map((item, index) => (
-                            <>
-                                <TextUnderline bottom={0} key={index} style={styleInfo3} borderheight={borderHeightInfo3}>
-                                    {item.text}
-                                </TextUnderline>
-                            </>
+                            <TextUnderline bottom={0} key={index} style={styleInfo3} borderheight={borderHeightInfo3}>
+                                {item.text}
+                            </TextUnderline>
                         ))}
                     </div>
                 </div>
