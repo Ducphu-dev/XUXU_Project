@@ -1,6 +1,7 @@
 import { Space, Divider } from 'antd';
 import React from 'react';
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -21,25 +22,25 @@ function Footer() {
               />
             }
           >
-            <a href="/" className="social-link">
+            <Link to="/" className="social-link">
               Behance
-            </a>
+            </Link>
 
-            <a href="/" className="social-link">
+            <Link to="/" className="social-link">
               Facebook
-            </a>
+            </Link>
 
-            <a href="/" className="social-link">
+            <Link to="/" className="social-link">
               Instagram
-            </a>
+            </Link>
 
-            <a href="/" className="social-link">
+            <Link to="/" className="social-link">
               Vimeo
-            </a>
+            </Link>
 
-            <a href="/" className="social-link">
+            <Link to="/" className="social-link">
               Artstation
-            </a>
+            </Link>
           </Space>
           <span className="copy-right">ⓒXUXU. All rights reserved.</span>
         </div>

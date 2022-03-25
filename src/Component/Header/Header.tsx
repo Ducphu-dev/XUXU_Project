@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import { Dropdown, Menu } from 'antd';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import {
   CaretDownOutlined,
   CloseOutlined,
@@ -36,49 +36,51 @@ function Header() {
     <section className="header" id="header">
       <div className="header-container">
         <nav className="nav">
-          <a className="logo" href="/">
+          <Link className="logo" to="/">
             <h1>XUXU</h1>
-          </a>
+          </Link>
 
           <ul className={`${isMenuShow ? 'nav-bar active' : 'nav-bar'}`}>
             <li
               className={`${
-                location.pathname == '/about' ? 'nav-item active' : 'nav-item'
+                location.pathname === '/about' ? 'nav-item active' : 'nav-item'
               }`}
             >
-              <a href="/about" className="nav-link">
+              <Link to="/about" className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li
               className={`${
-                location.pathname == '/works' ? 'nav-item active' : 'nav-item'
+                location.pathname === '/works' ? 'nav-item active' : 'nav-item'
               }`}
             >
-              <a href="/works" className="nav-link">
+              <Link to="/works" className="nav-link">
                 Works
-              </a>
+              </Link>
             </li>
             <li
               className={`${
-                location.pathname == '/contact' ? 'nav-item active' : 'nav-item'
+                location.pathname === '/contact'
+                  ? 'nav-item active'
+                  : 'nav-item'
               }`}
             >
-              <a href="/contact" className="nav-link">
+              <Link to="/contact" className="nav-link">
                 Contact
-              </a>
+              </Link>
             </li>
 
             <div className="lang">
               <span
                 onClick={() => setLang('en')}
-                className={`${lang == 'en' ? 'active' : null}`}
+                className={`${lang === 'en' ? 'active' : null}`}
               >
                 ENG
               </span>
               <span
                 onClick={() => setLang('kr')}
-                className={`${lang == 'kr' ? 'active' : null}`}
+                className={`${lang === 'kr' ? 'active' : null}`}
               >
                 KR
               </span>
