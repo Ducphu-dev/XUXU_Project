@@ -35,7 +35,7 @@
   @media screen and (max-width: 1250px) {
     flex-direction: column;
     height: 100vh;
-    min-height: 720px;
+    min-height: 1080px;
     &-left {
       justify-content: flex-start;
       &-content {
@@ -47,6 +47,7 @@
   }
 
   @media screen and (max-width: 768px) {
+    min-height: 0;
     &-title {
       span {
         font-size: 34px;

@@ -1,29 +1,36 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import { Dropdown, Menu } from 'antd';
+import { useLocation } from 'react-router-dom';
 import {
   CaretDownOutlined,
   CloseOutlined,
   MenuOutlined,
 } from '@ant-design/icons';
 
-const menu = (
-  <Menu>
-    <Menu.Item key={'eng'}>
-      <span>ENG</span>
-    </Menu.Item>
-    <Menu.Item key={'kr'}>
-      <span>KR</span>
-    </Menu.Item>
-  </Menu>
-);
-
 function Header() {
   const [isMenuShow, setIsMenuShow] = useState(false);
+  const [lang, setLang] = useState('en');
+  const location = useLocation();
 
   const onToggleMenu = () => {
     setIsMenuShow(!isMenuShow);
   };
+
+  const handleSelectMenu = ({ item, key, keyPath, domEvent }: any) => {
+    setLang(key);
+  };
+
+  const menu = (
+    <Menu selectedKeys={[lang]} onClick={handleSelectMenu}>
+      <Menu.Item key={'en'}>
+        <span>ENG</span>
+      </Menu.Item>
+      <Menu.Item key={'kr'}>
+        <span>KR</span>
+      </Menu.Item>
+    </Menu>
+  );
 
   return (
     <section className="header" id="header">
@@ -34,31 +41,54 @@ function Header() {
           </a>
 
           <ul className={`${isMenuShow ? 'nav-bar active' : 'nav-bar'}`}>
-            <li className="nav-item">
+            <li
+              className={`${
+                location.pathname == '/about' ? 'nav-item active' : 'nav-item'
+              }`}
+            >
               <a href="/about" className="nav-link">
                 About
               </a>
             </li>
-            <li className="nav-item">
+            <li
+              className={`${
+                location.pathname == '/works' ? 'nav-item active' : 'nav-item'
+              }`}
+            >
               <a href="/works" className="nav-link">
                 Works
               </a>
             </li>
-            <li className="nav-item">
+            <li
+              className={`${
+                location.pathname == '/contact' ? 'nav-item active' : 'nav-item'
+              }`}
+            >
               <a href="/contact" className="nav-link">
                 Contact
               </a>
             </li>
 
             <div className="lang">
-              <span className="active">ENG</span>
-              <span>KR</span>
+              <span
+                onClick={() => setLang('en')}
+                className={`${lang == 'en' ? 'active' : null}`}
+              >
+                ENG
+              </span>
+              <span
+                onClick={() => setLang('kr')}
+                className={`${lang == 'kr' ? 'active' : null}`}
+              >
+                KR
+              </span>
             </div>
           </ul>
 
           <Dropdown className="languages" overlay={menu}>
             <span>
-              ENG <CaretDownOutlined className="languages-toggle-icon" />
+              {lang === 'en' ? 'ENG' : 'KR'}{' '}
+              <CaretDownOutlined className="languages-toggle-icon" />
             </span>
           </Dropdown>
 
