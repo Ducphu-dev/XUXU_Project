@@ -50,11 +50,6 @@
           border-bottom: 5px solid map-get($map: $color, $key: main);
         }
       }
-      &:hover {
-        .nav-link {
-          color: map-get($map: $color, $key: red-1);
-        }
-      }
     }
     &-link,
     .languages,
@@ -64,11 +59,6 @@
       color: map-get($map: $color, $key: main);
       letter-spacing: -0.18px;
       text-transform: uppercase;
-    }
-    &-link {
-      &.active {
-        color: map-get($map: $color, $key: red-1);
-      }
     }
     .languages {
       display: flex;
