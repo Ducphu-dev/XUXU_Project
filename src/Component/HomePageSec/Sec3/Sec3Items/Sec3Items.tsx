@@ -82,15 +82,15 @@ function HomePageSec3(props:any) {
         }
     }, [width]);
     return (
-        <div className= "sec-3_bottom center">
+        <div className= "sec-3_bottom center" >
             <div className="sec-3_bottom-title">
                 {
                     Title.split(' ').map((item:any, index:any) => (
-                        <>
+                        
                             <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                                 {item}
                             </TextUnderline>
-                        </>
+                        
                     ))
                 }
             </div>

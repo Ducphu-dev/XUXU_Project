@@ -30,11 +30,11 @@ function HomePageSec4(props:any) {
     });
     const [borderHeightInfoTitle, setBorderHeightTitle] = useState<number>(5);
     const title1 ="Illustaration".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
 
     const title = <p>{title1}</p>
@@ -146,8 +146,8 @@ function HomePageSec4(props:any) {
                         >
                         {
                             itemsSec4.map((items:any,index:any)=>
-                                <SwiperSlide>
-                                    <HomeItemsCard items={items}/>
+                                <SwiperSlide key={index}>
+                                    <HomeItemsCard items={items} />
                                 </SwiperSlide>
                             )
                         }

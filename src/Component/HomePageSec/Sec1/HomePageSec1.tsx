@@ -23,46 +23,46 @@ function HomePageSec1(props:any) {
     const [borderHeightInfoDecs, setBorderHeightDecs] = useState<number>(1);
 
     const decs1 ="California".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     const decs2 ="fine arts".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     const decs3 ="graphic design".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     const decs4 ="illustration".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     const decs5 ="TV commercial".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     const decs6 ="game".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     
     const decs = <p>XUXU is artist based in {decs1}, where she currently works <br/> in the {decs2}, {decs3},{decs4}, {decs5}, and {decs6}.<br/>XUXU make things move, to help move people.</p>
@@ -203,12 +203,12 @@ function HomePageSec1(props:any) {
                     </div>
                     <div className="w-3 home-1-about_right">
                         <div className="home-1-about_right-decs">
-                            {inforTitle1.split(' ').map((item, index) => (
-                                <>
+                            {inforTitle1.split(' ').map((item:any, index:any) => (
+                                
                                     <TextUnderline bottom={0} key={index} style={styleInfoTitle1} borderheight={borderHeightInfoTitle1}>
                                         {item}
                                     </TextUnderline>
-                                </>
+                                
                             ))}
                             <p>XUXU is artist based in Califonia.</p>
                         </div>
@@ -221,12 +221,12 @@ function HomePageSec1(props:any) {
                 <div className="home-1-intro">
                     <div className="w-7 home-1-intro_left ">
                         <div className="home-1-intro_left-decs">
-                            {inforTitle2.split(' ').map((item, index) => (
-                                <>
+                            {inforTitle2.split(' ').map((item:any, index:any) => (
+                                
                                     <TextUnderline bottom={0} key={index} style={styleInfoTitle1} borderheight={borderHeightInfoTitle1}>
                                         {item}
                                     </TextUnderline>
-                                </>
+                                
                             ))}
                             {decs}
                         </div>

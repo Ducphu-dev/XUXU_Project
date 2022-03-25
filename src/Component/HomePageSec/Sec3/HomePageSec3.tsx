@@ -25,11 +25,11 @@ function HomePageSec3(props:any) {
     });
     const [borderHeightInfoTitle, setBorderHeightTitle] = useState<number>(5);
     const title1 ="Graphic deisgn".split(' ').map((item:any, index:any) => (
-        <>
+       
             <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
 
     const title = <p>{title1}</p>
@@ -45,18 +45,18 @@ function HomePageSec3(props:any) {
     const [borderHeightInfoDecs, setBorderHeightDecs] = useState<number>(1);
 
     const decs1 ="incididunt ut labore".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     const decs2 ="commodo consequat".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     
     const decs = <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor {decs1} et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea {decs2}. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, totam rem luptatem.</p>

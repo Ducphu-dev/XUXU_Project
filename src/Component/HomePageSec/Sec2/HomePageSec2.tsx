@@ -27,11 +27,11 @@ function HomePageSec2(props:any) {
     });
     const [borderHeightInfoTitle, setBorderHeightTitle] = useState<number>(5);
     const title1 ="Fine art".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
 
     const title = <p>{title1}</p>
@@ -48,11 +48,11 @@ function HomePageSec2(props:any) {
     const [borderHeightInfoDecs, setBorderHeightDecs] = useState<number>(1);
 
     const decs1 ="do eiusmod".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
     
     const decs = <p>Lorem ipsum dolor sit amet, elit, sed {decs1} tempor incidid dolore magna aliqua. Ut enim ad min veniam,</p>

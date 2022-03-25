@@ -7,7 +7,7 @@ import TextUnderline from '../../Component/TextUnderline/TextUnderline';
 import './HomeItemsCard.scss';
 function HomeItemsCard(props:any) {
     
-    const {items} = props
+    const {items,index} = props
     const { width, height } = useWindowSize();
 
 
@@ -93,7 +93,7 @@ function HomeItemsCard(props:any) {
     }, [width]);
 
     return (
-        <div className= "home-items_block">
+        <div className= "home-items_block" key={index}>
             <div className="home-items">
                 <a className="home-items_link" href=""></a>
                 <div className="home-items_img" >
@@ -105,11 +105,11 @@ function HomeItemsCard(props:any) {
                     <div className="home-items_infor-title">
                         {
                             items.itemsTitle.split(' ').map((item:any, index:any) => (
-                                <>
+                                
                                     <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                                         {item}
                                     </TextUnderline>
-                                </>
+                                
                             ))
                         }
                     </div>

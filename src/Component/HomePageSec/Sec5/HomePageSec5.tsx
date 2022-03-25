@@ -29,11 +29,11 @@ function HomePageSec5(props:any) {
     });
     const [borderHeightInfoTitle, setBorderHeightTitle] = useState<number>(5);
     const title1 ="Advertising".split(' ').map((item:any, index:any) => (
-        <>
+    
             <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
 
     const title = <p>{title1}</p>
@@ -135,7 +135,7 @@ function HomePageSec5(props:any) {
                 <div className="home-5">
                     <div className="home-5_wrapper">
                         <div className='home-5_items w-65'>
-                            <HomeItemsCard items={itemsSec5_1}/>
+                            <HomeItemsCard items={itemsSec5_1} />
                         </div>
                         <div className='home-5_items w-35'>
                             <HomeItemsCard items={itemsSec5_2}/>

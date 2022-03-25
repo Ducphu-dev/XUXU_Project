@@ -26,11 +26,11 @@ function HomePageSec6(props:any) {
     });
     const [borderHeightInfoTitle, setBorderHeightTitle] = useState<number>(5);
     const title1 ="Game art".split(' ').map((item:any, index:any) => (
-        <>
+        
             <TextUnderline bottom={0} key={index} style={styleInfoTitle} borderheight={borderHeightInfoTitle}>
                 {item}
             </TextUnderline>
-        </>
+        
     ))
 
     const title = <p>{title1}</p>
@@ -176,11 +176,11 @@ function HomePageSec6(props:any) {
                             <div className="home-6_wdecs-items">
                                 {
                                     decs1.split(' ').map((item:any, index:any) => (
-                                        <>
+                                        
                                             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                                                 {item}
                                             </TextUnderline>
-                                        </>
+                                        
                                     ))
                                 }
                                 <div className="decs">
@@ -189,12 +189,12 @@ function HomePageSec6(props:any) {
                             </div>
                             <div className="home-6_wdecs-items">
                                 {
-                                    decs1.split(' ').map((item:any, index:any) => (
-                                        <>
+                                    decs2.split(' ').map((item:any, index:any) => (
+                                    
                                             <TextUnderline bottom={0} key={index} style={styleInfoDecs} borderheight={borderHeightInfoDecs}>
                                                 {item}
                                             </TextUnderline>
-                                        </>
+                                        
                                     ))
                                 }
                                 <div className="decs">
