@@ -1,0 +1,68 @@
+@import '../../Assets/style/variables';
+
+.banner {
+  display: flex;
+  height: 37.5vw;
+  background-color: map-get($map: $color, $key: main);
+  &-left,
+  &-right {
+    flex: 1;
+  }
+  &-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: map-get($map: $color, $key: w);
+    &-content {
+      width: 100%;
+      margin-left: auto;
+      max-width: 817px;
+      padding: 0 30px;
+    }
+  }
+  &-right {
+    background: url('../../Assets/images/Contact/contact-01.png') center/cover
+      no-repeat;
+    background-position: center;
+  }
+  &-desc {
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: capitalize;
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: 1250px) {
+    flex-direction: column;
+    height: 100vh;
+    min-height: 720px;
+    &-left {
+      justify-content: flex-start;
+      &-content {
+        width: 50%;
+        margin: 0 30px;
+        padding: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &-title {
+      span {
+        font-size: 34px;
+        line-height: 46px;
+      }
+    }
+    &-desc {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &-desc {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}

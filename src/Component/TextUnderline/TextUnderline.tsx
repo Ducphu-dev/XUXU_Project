@@ -7,12 +7,18 @@ interface TextUnderlineProps {
   borderheight?: number;
   children: any;
   bottom?: number;
+  className?: string;
 }
 
 function TextUnderline(props: TextUnderlineProps) {
-  const { style, borderheight, children, bottom } = props;
+  const { style, borderheight, children, bottom, className } = props;
   return (
-    <Text style={style} borderheight={borderheight} bottom={bottom}>
+    <Text
+      style={style}
+      borderheight={borderheight}
+      bottom={bottom}
+      className={className}
+    >
       {children}
     </Text>
   );
