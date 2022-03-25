@@ -94,9 +94,16 @@
     .nav {
       &-item {
         height: auto;
+        line-height: normal;
+        .nav-link {
+          height: 72px;
+        }
         &.active {
           a {
             color: map-get($map: $color, $key: red-1);
+            border-bottom: none;
+            height: 72px;
+            line-height: normal;
           }
         }
       }
