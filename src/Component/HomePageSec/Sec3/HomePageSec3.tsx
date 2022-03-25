@@ -145,6 +145,24 @@ function HomePageSec3(props:any) {
                 color: '#000000',
             });
             setBorderHeightTitle(3);
+        } else if (width <= 480 && width > 320) {
+            setStyleInfoDecs({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setStyleInfoTitle({
+                fontSize: `35px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '600',
+                marginRight: '5px',
+            });
+            setBorderHeightTitle(1);
         } else if (width <= 320) {
             setStyleInfoDecs({
                 fontSize: `16px`,

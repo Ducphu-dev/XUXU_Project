@@ -157,7 +157,25 @@ function HomePageSec1(props:any) {
                 marginRight: '5px',
             });
             setBorderHeightTitle1(1);
-        } else if (width <= 320) {
+        } else if (width <= 480 && width > 320) {
+            setStyleInfoDecs({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '400',
+                marginRight: '5px',
+            });
+            setStyleInfoTitle1({
+                fontSize: `16px`,
+                fontFamily: '$montserrat',
+                lineHeight: '0.8',
+                color: '#111111',
+                fontWeight: '600',
+                marginRight: '5px',
+            });
+            setBorderHeightTitle1(1);
+        }else if (width <= 320) {
             setStyleInfoDecs({
                 fontSize: `16px`,
                 fontFamily: '$montserrat',

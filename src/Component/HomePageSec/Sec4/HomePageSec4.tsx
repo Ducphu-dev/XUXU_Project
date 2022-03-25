@@ -89,6 +89,18 @@ function HomePageSec4(props:any) {
                 color: '#000000',
             });
             setBorderHeightTitle(3);
+        }else if (width <= 480 && width > 320) {
+            
+            setStyleInfoTitle({
+                fontSize: `35px`,
+                fontFamily: '$montserrat',
+                marginRight: '10px',
+                fontWeight: '600',
+                marginBottom: '14px',
+                lineHeight: '0.9',
+                color: '#000000',
+            });
+            setBorderHeightTitle(3);
         } else if (width <= 320) {
            
             setStyleInfoTitle({

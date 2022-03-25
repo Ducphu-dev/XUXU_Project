@@ -137,6 +137,27 @@ function HomePageSec6(props:any) {
                 color: '#000000',
             });
             setBorderHeightTitle(3);
+        }else if (width <= 768 && width > 480) {
+            setStyleInfoDecs({
+                fontSize: `18px`,
+                fontFamily: '$montserrat',
+                marginRight: '5px',
+                fontWeight: '600',
+                marginBottom: '0',
+                lineHeight: '1',
+                color: '#111111',
+            });
+            setBorderHeightDecs(2);
+            setStyleInfoTitle({
+                fontSize: `35px`,
+                fontFamily: '$montserrat',
+                marginRight: '10px',
+                fontWeight: '600',
+                marginBottom: '14px',
+                lineHeight: '0.9',
+                color: '#000000',
+            });
+            setBorderHeightTitle(3);
         } else if (width <= 320) {
             setStyleInfoDecs({
                 fontSize: `16px`,
