@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import BackToTop from '../../Component/BackToTop/BackToTop';
 import Header from '../../Component/Header/Header';
 import { RouterString } from '../../Component/Modules/routesString';
 import Footer from '../Footer/Footer';
@@ -47,6 +48,7 @@ function RouterWrapper() {
         <Redirect to={RouterString.PageNotFound} />
       </Switch>
       {RenderFooter(isHistoryCheck())}
+      <BackToTop />
     </>
   );
 }
